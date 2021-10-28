@@ -1,0 +1,180 @@
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+require("dotenv").config();
+
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
+module.exports = {
+  title: "The Bitcoin Cash Podcast",
+  tagline:
+    "Following Bitcoin Cash (BCH) on its rise to global reserve currency.",
+  url: "https://www.bitcoincashpodcast.com",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/bch.ico",
+  organizationName: "The Bitcoin Cash Podcast", // Usually your GitHub org/user name.
+  projectName: "bitcoincashpodcast-v2", // Usually your repo name.
+  themeConfig: {
+    navbar: {
+      title: "The Bitcoin Cash Podcast",
+      logo: {
+        alt: "BCH logo",
+        src: "img/bch.png",
+      },
+      items: [
+        { to: "/about", label: "About", position: "left" },
+        {
+          type: "doc",
+          docId: "welcome",
+          position: "left",
+          label: "Episodes",
+        },
+        { to: "/music", label: "Music", position: "left" },
+        { to: "/faqs", label: "FAQs", position: "left" },
+        { to: "/stats", label: "Stats", position: "left" },
+        { to: "/code", label: "Code", position: "left" },
+        { to: "/recommended", label: "Recommended", position: "left" },
+      ],
+    },
+    footer: {
+      style: "light",
+      links: [
+        {
+          title: "Pages",
+          items: [
+            {
+              label: "About",
+              to: "/about",
+            },
+            {
+              label: "Episodes",
+              to: "/docs/welcome",
+            },
+            {
+              label: "Music",
+              to: "/music",
+            },
+            {
+              label: "FAQs",
+              to: "/faqs",
+            },
+            {
+              label: "Stats",
+              to: "/stats",
+            },
+            {
+              label: "Code",
+              to: "/code",
+            },
+            {
+              label: "Recommended",
+              to: "/recommended",
+            },
+          ],
+        },
+        {
+          title: "Follow The Bitcoin Cash Podcast",
+          items: [
+            {
+              label: "Youtube",
+              href: "https://www.youtube.com/channel/UCsrDsJnHFnkMnJhEslofyPQ",
+            },
+            {
+              label: "Youtube (Clips Channel)",
+              href: "https://www.youtube.com/channel/UC22kOwMuIzJCOtAPjoIjkFA",
+            },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/TheBCHPodcast",
+            },
+            {
+              label: "Noise.cash",
+              href: "https://noise.cash/u/TheBitcoinCashPodcast",
+            },
+            {
+              label: "Telegram",
+              href: "https://t.me/thebitcoincashpodcast",
+            },
+            {
+              label: "Cointree",
+              href: "https://noise.cash/u/TheBitcoinCashPodcast",
+            },
+            {
+              label: "Instagram",
+              href: "https://www.instagram.com/thebitcoincashpodcast/",
+            },
+            {
+              label: "Twitch.tv",
+              href: "https://www.twitch.tv/thebitcoincashpodcast",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            {
+              label: "Source Code",
+              href: "https://github.com/JeremyEllingham/bitcoincashpodcast-v2",
+            },
+          ],
+        },
+      ],
+      logo: {
+        alt: "bitcoincash:qz3vhlah6qknp4ephddf4c5lxmx55x00jvjxxetc7h",
+        src: "img/donationsQR.png",
+        href: "https://blockchair.com/bitcoin-cash/address/qz3vhlah6qknp4ephddf4c5lxmx55x00jvjxxetc7h",
+      },
+      copyright: `Donations - bitcoincash:qz3vhlah6qknp4ephddf4c5lxmx55x00jvjxxetc7h`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+    googleAnalytics: {
+      trackingID: process.env.GOOGLE_ANALYTICS_ID,
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
+    gtag: {
+      // You can also use your "G-" Measurement ID here.
+      trackingID: process.env.GOOGLE_ANALYTICS_ID,
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
+  },
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      {
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/JeremyEllingham/bitcoincashpodcast-v2",
+        },
+        blog: {
+          showReadingTime: true,
+          editUrl: "https://github.com/JeremyEllingham/bitcoincashpodcast-v2",
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "faqs",
+        path: "faqs",
+        routeBasePath: "faqs",
+        sidebarPath: require.resolve("./sidebars.js"), //sidebarsFaqs.js
+      },
+    ],
+    [
+      "docusaurus2-dotenv",
+      {
+        systemvars: true,
+      },
+    ],
+  ],
+};
