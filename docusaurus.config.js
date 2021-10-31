@@ -73,12 +73,33 @@ module.exports = {
           ],
         },
         {
-          title: "Follow The Bitcoin Cash Podcast",
+          title: "Listen",
           items: [
             {
               label: "Youtube",
               href: "https://www.youtube.com/channel/UCsrDsJnHFnkMnJhEslofyPQ",
             },
+            {
+              label: "Apple Podcasts",
+              href: "https://podcasts.apple.com/gb/podcast/the-bitcoin-cash-podcast/id1555355070",
+            },
+            {
+              label: "Google Podcasts",
+              href: "https://podcasts.google.com/feed/aHR0cHM6Ly9tZWRpYS5yc3MuY29tL2JpdGNvaW5jYXNocG9kY2FzdC9mZWVkLnhtbA",
+            },
+            {
+              label: "Spotify (Podcast)",
+              href: "https://open.spotify.com/show/01N17Oi7sRZM4vYGiTO6uk",
+            },
+            {
+              label: "Spotify (Music)",
+              href: "https://open.spotify.com/artist/4wyXjYROLQdNvL6qwgCerH",
+            },
+          ],
+        },
+        {
+          title: "Follow",
+          items: [
             {
               label: "Youtube (Clips Channel)",
               href: "https://www.youtube.com/channel/UC22kOwMuIzJCOtAPjoIjkFA",
@@ -106,15 +127,6 @@ module.exports = {
             {
               label: "Twitch.tv",
               href: "https://www.twitch.tv/thebitcoincashpodcast",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Source Code",
-              href: "https://github.com/JeremyEllingham/bitcoincashpodcast-v2",
             },
           ],
         },
