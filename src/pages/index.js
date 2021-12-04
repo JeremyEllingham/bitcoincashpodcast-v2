@@ -112,7 +112,7 @@ function HomepageHeader4() {
           Putting the currency back in cryptocurrency
         </h1>
         <p className="hero__subtitle" style={{ color: "black" }}>
-          The story of a grassroots uprising
+          A proactive peer-to-peer economy
         </p>
         <ReactPlayer
           style={{
@@ -121,7 +121,7 @@ function HomepageHeader4() {
             marginLeft: "auto",
             marginRight: "auto",
           }}
-          url={"https://www.youtube.com/watch?v=Nk6GvmByv2U"}
+          url={"https://www.youtube.com/watch?v=fF5iS8ghp44"}
           target="_blank"
         />
         <div className={styles.buttons}>

@@ -133,11 +133,11 @@ module.exports = {
         },
       ],
       logo: {
-        alt: "bitcoincash:qzfqq29knsypt36lscwmrg38crxrqgn2kufnljzavh",
+        alt: "bitcoincash:qp8aj6cezwswjtgr4h5qzrwwgsdqrulmpu7c6pyatn",
         src: "img/donationsQR.png",
-        href: "https://blockchair.com/bitcoin-cash/address/qzfqq29knsypt36lscwmrg38crxrqgn2kufnljzavh",
+        href: "https://blockchair.com/bitcoin-cash/address/qp8aj6cezwswjtgr4h5qzrwwgsdqrulmpu7c6pyatn",
       },
-      copyright: `Donations - bitcoincash:qzfqq29knsypt36lscwmrg38crxrqgn2kufnljzavh`,
+      copyright: `Donations - bitcoincash:qp8aj6cezwswjtgr4h5qzrwwgsdqrulmpu7c6pyatn`,
     },
     prism: {
       theme: lightCodeTheme,
