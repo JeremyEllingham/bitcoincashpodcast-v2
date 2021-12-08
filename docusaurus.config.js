@@ -34,6 +34,7 @@ module.exports = {
         { to: "/faqs", label: "FAQs", position: "left" },
         { to: "/stats", label: "Stats", position: "left" },
         { to: "/code", label: "Code", position: "left" },
+        { to: "/build", label: "Build", position: "left" },
         { to: "/recommended", label: "Recommended", position: "left" },
       ],
     },
@@ -66,6 +67,10 @@ module.exports = {
             {
               label: "Code",
               to: "/code",
+            },
+            {
+              label: "Build",
+              to: "/build",
             },
             {
               label: "Recommended",
