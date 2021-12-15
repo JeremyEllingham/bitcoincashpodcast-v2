@@ -158,6 +158,18 @@ module.exports = {
       // Optional fields.
       anonymizeIP: true, // Should IPs be anonymized?
     },
+    algolia: {
+      // If Algolia did not provide you any appId, use 'BH4D9OD16A'
+      appId: process.env.ALGOLIA_APP_ID,
+
+      // Public API key: it is safe to commit it
+      apiKey: process.env.ALGOLIA_FRONTEND_API_KEY,
+
+      indexName: process.env.ALGOLIA_INDEX,
+
+      // Optional: see doc section below
+      contextualSearch: true,
+    },
   },
   presets: [
     [
