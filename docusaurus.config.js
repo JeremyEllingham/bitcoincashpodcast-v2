@@ -138,11 +138,11 @@ module.exports = {
         },
       ],
       logo: {
-        alt: "bitcoincash:qp8aj6cezwswjtgr4h5qzrwwgsdqrulmpu7c6pyatn",
+        alt: "bitcoincash:qpqv9wfx276atyfc068nmsvqux0w22hy4vhedrw9jr",
         src: "img/donationsQR.png",
-        href: "https://blockchair.com/bitcoin-cash/address/qp8aj6cezwswjtgr4h5qzrwwgsdqrulmpu7c6pyatn",
+        href: "https://blockchair.com/bitcoin-cash/address/qpqv9wfx276atyfc068nmsvqux0w22hy4vhedrw9jr",
       },
-      copyright: `Donations - bitcoincash:qp8aj6cezwswjtgr4h5qzrwwgsdqrulmpu7c6pyatn`,
+      copyright: `Donations - bitcoincash:qpqv9wfx276atyfc068nmsvqux0w22hy4vhedrw9jr`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -158,6 +158,18 @@ module.exports = {
       trackingID: process.env.GOOGLE_ANALYTICS_ID,
       // Optional fields.
       anonymizeIP: true, // Should IPs be anonymized?
+    },
+    algolia: {
+      // If Algolia did not provide you any appId, use 'BH4D9OD16A'
+      appId: process.env.ALGOLIA_APP_ID,
+
+      // Public API key: it is safe to commit it
+      apiKey: process.env.ALGOLIA_FRONTEND_API_KEY,
+
+      indexName: process.env.ALGOLIA_INDEX,
+
+      // Optional: see doc section below
+      contextualSearch: true,
     },
   },
   presets: [
