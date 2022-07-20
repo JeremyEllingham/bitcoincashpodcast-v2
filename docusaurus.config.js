@@ -23,6 +23,7 @@ module.exports = {
       },
       items: [
         { to: "/start", label: "Start Here!", position: "left" },
+        { to: "/roadmap", label: "Roadmap", position: "left" },
         { to: "/about", label: "About", position: "left" },
         {
           type: "doc",
