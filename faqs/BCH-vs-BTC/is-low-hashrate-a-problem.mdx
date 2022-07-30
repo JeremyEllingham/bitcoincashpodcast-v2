@@ -1,0 +1,28 @@
+---
+id: is-low-hashrate-a-problem
+sidebar_position: 8
+title: Is low hashrate a problem?
+---
+
+Profit-seeking miners naturally split their mining between BTC and BCH until the coins reach [equal profitability](https://cash.coin.dance/blocks/profitability). What this means is, the ratio of BTC:BCH mining hashrate floats at roughly the the same as the BTC:BCH price ratio. If BTC:BCH is 1:100 in market price, then BTC will have roughly 100x as much hashrate and so BCH will have roughly 1% of the hash rate of BTC.
+
+This raises questions about whether or not BCH could be "51% attacked", and thus be an insecure coin.
+
+Low hash rate on BCH is not ideal, and it would unquestionably be better if it could take more hash rate from BTC. Despite the [many reasons](/faqs/BCH/why-bitcoin-cash) to prefer BCH, hash rate is one of the [few reasons](/faqs/BCH/why-not-bitcoin-cash) to prefer BTC or another coin currently. The BCH community has a very clear, sustainable plan to improve the hash rate: [spread adoption](/faqs/BCH/is-bch-spreading), grow the coin's utility, which will (eventually) increase the price and attract mining hash rate by default. This is not a quick fix, but it is a permanent one.
+
+In practice, while that is progress, low hash rate isn't a huge issue. There is no **guarantee** that miners won't 51% attack BCH, but there are two VERY significant factors that make it highly, highly unlikely:
+
+1. **History**: BCH has been a minority hash rate for a very, very long time. It hasn't suffered any successful attacks in that time. It has been attempted at times, including during the fork with BSV, and every time it does more miners come from BTC to protect it. This has been seen on a couple of occassions, so it seems the miners overall want to keep BCH alive, which makes sense because they need it as a backup for when BTC scaling stops working.
+2. **Incentives**: Bitcoin miners have no reason to attack BCH, since their profits come from SHA256 coins (ie all Bitcoin forks), not BTC specifically. Imagine if you owned a gold mine and a silver mine, would you send your metal miners away from your gold mine to attack your own silver mine? Makes no sense, not only are you losing the income of your silver mine, but also the time wasted by the gold miners, suffering damage on your silver mines and creating loss of investor/internal confidence in your own mining operation plus a loss of confidence in the broader silver market.
+
+It is important to note that BCH has a difficulty algorithm that adjusts every block (so roughly every 10 minutes). BTC is much slower, and only adjusts every 2016 blocks or roughly every two weeks. Therefore BCH is far more resilient in the face of significant changes in hash rate.
+
+Furthermore, to protect against any sudden mining attacks, BCH has a 10-block rolling checkpoint system. This finalizes coins that are (on average) two hours old, as nodes will ignore a wildly different chain that appears from nowhere to attack the chain. As before, the need for this is not ideal, but it's a measure in place to mitigate risk in the short term while growing adoption and price and hash rate can occur to fix it in the long term.
+
+Also note that the hash rate = price equation cuts both ways. While BCH has a low price (relative to BTC), it recieves a low hash rate. However, a rising price will organically (and inevitably) bring increased hash rate to BCH. At the same time, it sucks hash rate away from BTC. Increasing price and increasing coin security can compound on each other in a virtuous cycle, which could potentially create a scenario where BCH rapidly climbs past BTC (which would have falling hash rate, potentially triggering a fall in price, repeat).
+
+After the BTC/BCH fork, some investors accidentally sent BCH to BTC SegWit addresses. These coins got stuck because BCH does not have SegWit. BCH had a specific upgrade so that miners could return those coins to their owners. One miner decided to try and steal these coins as SegWit allows them to be "spent by everyone". BTC.com and BTC.top came together and [saved those coins](https://blog.coinbase.com/a-deep-dive-into-the-recent-bch-hard-fork-incident-2ee14132f435) and returned them to their owners. This was a chain reorganisation, similar to the ones that [happen on BTC](https://www.coindesk.com/tech/2021/01/21/the-bitcoin-double-spend-that-never-happened/). This incident is sometimes mislabelled as a "51% attack" to attempt to smear the security of the BCH chain.
+
+See also: [Why Bitcoin Cash instead of another cryptocurrency?](/faqs/BCH/why-bitcoin-cash)
+
+See also: [Nothing is perfect, why NOT Bitcoin Cash?](/faqs/BCH/why-not-bitcoin-cash)
