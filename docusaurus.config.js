@@ -164,7 +164,7 @@ module.exports = {
         src: "img/donationsQR.png",
         href: `https://blockchair.com/bitcoin-cash/address/${bchAddress}`,
       },
-      copyright: `Donations - bitcoincash:${bchAddress}``,
+      copyright: `Donations - bitcoincash:${bchAddress}`,
     },
     prism: {
       theme: lightCodeTheme,
