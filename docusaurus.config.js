@@ -108,6 +108,10 @@ module.exports = {
               href: "https://open.spotify.com/artist/4wyXjYROLQdNvL6qwgCerH",
             },
             {
+              label: "RSS",
+              href: "https://media.rss.com/bitcoincashpodcast/feed.xml",
+            },
+            {
               label: "TuneIn (Alexa & Tesla)",
               href: "https://tunein.com/podcasts/Entrepreneurship/The-Bitcoin-Cash-Podcast-p1977472/",
             },
@@ -118,6 +122,14 @@ module.exports = {
             {
               label: "Rumble",
               href: "https://rumble.com/user/BitcoinCashPodcast",
+            },
+            {
+              label: "Stitcher",
+              href: "https://www.stitcher.com/show/the-bitcoin-cash-podcast",
+            },
+            {
+              label: "Deezer",
+              href: "https://deezer.com/show/5274917",
             },
           ],
         },
