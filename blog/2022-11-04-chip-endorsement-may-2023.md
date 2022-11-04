@@ -31,6 +31,6 @@ To a smooth May 2023 upgrade!
 
 Jeremy
 
-Further reading:
+## Further reading:
 
 [Jason Dreyzehner's Blog post on 2023 CHIPs](https://blog.bitjson.com/bitcoin-cash-upgrade-2023/)
