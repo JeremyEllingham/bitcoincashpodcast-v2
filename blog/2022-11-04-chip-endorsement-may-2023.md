@@ -17,7 +17,7 @@ The Bitcoin Cash Podcast wholeheartedly supports the November lock-in and May im
 
 I have reviewed the CHIP documents in some detail. A full breakdown and discussion will be done on an upcoming episode of the show, perhaps after the St Kitts conference.
 
-BCH has several areas in need of big improvement, but its protocol level development is not one. There is industry leading thought, care, discussion and engineering skill being carefully added to Bitcoin Cash.
+BCH has several areas it is underperforming competing cryptocurrency projects, but its protocol level development is not one. There is industry leading thought, care, discussion and engineering skill being carefully added to Bitcoin Cash.
 
 This bodes very well for the next few years. Momentum is a hard thing to capture but an overwhelmingly powerful force once attained, and momentum in Bitcoin Cash is building. Important technical improvements smoothly implemented at the protocol layer are the foundation of that progress and should bring much excitement to the BCH community for the resulting user-facing apps and innovations they will undoubtedly facilitate. In some cases, changes reduce technical debt or improve security and, though invisible to end users, are essential to the continued resilience and effective development of the blockchain.
 
