@@ -11,7 +11,7 @@ The Bitcoin BTC community frequently presents the Lightning Network as a panacea
 There are a number of important points to consider about Lightning Network.
 
 - **BCH compatible**: Bitcoin Cash advocates don't have any ideological objection to the Lightning Network. If the Bitcoin BTC community can demonstrate it as a viable scaling solution, Bitcoin Cash will absorb the benefit of all of that work & open-source code developed on Bitcoin BTC by porting the software to BCH. Unlike the rigid Bitcoin BTC community, the Bitcoin Cash community proactively adopts and adapts provably valuable ideas from other cryptocurrencies. A perfect example is the integration of the Ethereum/EVM ecosystem with [SmartBCH](/faqs/SmartBCH/what-is-smart-bch). Ironically, the Lightning Network would actually function far more effectively on Bitcoin Cash than on Bitcoin BTC because lower on-chain fees ameliorate many of the problems explained below. That said, the Bitcoin Cash community has not diverted resources from on-chain scaling efforts towards replicating Lightning Network to date because it isn't necessary yet due to BCH's low on-chain fees and the Bitcoin BTC community are already doing extensive development work which can be copied later if necessary.
-- **Requires larger blocks**: For the Lightning Network to function effectively, it requires at least 133 MB blocks. This point was made in [the original Lightning Network white paper](https://lightning.network/lightning-network-paper.pdf). Note that this assumes no usage of the chain for anything other than opening channels (no closing channels, no channel disputes, no regular on-chain payments, no other sidechain solutions) so in reality blocksizes would need to be even larger.
+- **Requires larger blocks**: For the Lightning Network to function effectively, it requires at least 133 MB blocks. This point was made in [the original Lightning Network white paper](https://lightning.network/lightning-network-paper.pdf). Note that this assumes no usage of the main Bitcoin blockchain for anything other than opening channels (no closing channels, no channel disputes, no regular on-chain payments, no other sidechain solutions) so in reality blocksizes would need to be even larger.
 
 ```
 If all transactions using Bitcoin were conducted inside a network of
@@ -26,6 +26,17 @@ per year with unlimited transactions inside the channel, it would require
 - **Fee Extraction**: Routing fees on Lightning Network are funds that otherwise would have been paid as on-chain fees to Bitcoin miners. In this way, the Lightning Network can potentially siphon away enough money to prevent Bitcoin miners earning enough from transaction fees to maintain chain security hashing power. It's possible eventually there will be enough activity to sustain both, but that is far from established (particularly with the low-volume, high-fees on-chain model of Bitcoin BTC). In this way, pre-emptive implementation of Lightning Network may parasitically destroy the long term security of the underlying chain - another reason BCH is not focussed on Lightning Network at this stage.
 
 For a big list of other bugs and issues with the Lightning Network, check out [this compilation](https://github.com/davidshares/Lightning-Network).
+
+For a detailed breakdown of the forthcoming fee extraction and liquidity problems on Lightning Network, check out this video by Joël Valenzuela.
+
+<ReactPlayer
+  style={{
+    paddingTop: 10,
+    paddingBottom: 20,
+  }}
+  url={"https://www.youtube.com/watch?v=YeSOBgKRmfY"}
+  target="_blank"
+/>
 
 A good breakdown of lots of these problems (as well as the history of its creation and financial backers) can be found in the Who Killed Bitcoin documentary:
 
