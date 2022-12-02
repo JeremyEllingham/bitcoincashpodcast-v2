@@ -138,6 +138,10 @@ module.exports = {
           title: "Follow",
           items: [
             {
+              label: "CashRain",
+              href: "https://cashrain.com/BitcoinCashPodcast",
+            },
+            {
               label: "Youtube (Clips Channel)",
               href: "https://www.youtube.com/channel/UC22kOwMuIzJCOtAPjoIjkFA",
             },
