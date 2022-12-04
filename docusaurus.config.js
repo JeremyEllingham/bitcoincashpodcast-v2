@@ -167,7 +167,7 @@ module.exports = {
             },
             {
               label: "Cointree",
-              href: "https://noise.cash/u/TheBitcoinCashPodcast",
+              href: "https://cointr.ee/bitcoincashpodcast",
             },
             {
               label: "Instagram",
