@@ -2,7 +2,7 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 require("dotenv").config();
 
-const bchAddress = "qqp46yxv56stea5maxq90lf720z2wkzwyc9a2f3fn9";
+const bchAddress = "qq487m8m0v97652muj302ch84ypl06wdvs7z2mt4s9";
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
