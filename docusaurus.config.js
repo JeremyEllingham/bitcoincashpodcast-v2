@@ -150,8 +150,8 @@ module.exports = {
               href: "https://twitter.com/TheBCHPodcast",
             },
             {
-              label: "Noise.cash",
-              href: "https://noise.cash/u/TheBitcoinCashPodcast",
+              label: "Noise.app",
+              href: "https://noise.app/TheBitcoinCashPodcast",
             },
             {
               label: "Telegram (Announcements)",
