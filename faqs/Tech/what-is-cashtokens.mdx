@@ -1,0 +1,80 @@
+---
+id: what-is-cashtokens
+sidebar_position: 1
+title: What is CashTokens and why is it exciting?
+---
+
+import ReactPlayer from "react-player/youtube";
+
+CashTokens is a (forthcoming) upgrade to the Bitcoin Cash protocol that adds two new primitives - fungible and non-fungible tokens (NFTs). This summary understates the power of the upgrade as tokens on other chains are frequently frivolous financial rehypothication schemes or scams while NFTs on other chains are famous mostly as "collectible monkey pictures" (like the [Bored Ape Yacht Club on Ethereum](https://opensea.io/collection/boredapeyachtclub)). CashTokens is better understood as adding internal state (programmatic power) and inter-contract communication to Bitcoin Cash contracts / transactions (although it can of course also do token schemes and tradeable monkey pictures).
+
+CashTokens has already "locked-in" for implementation in November 2022, and will go live on the main network in the BCH network upgrade in May 2023. Consumer facing wallet integrations and apps should follow.
+
+The [CHIP spec](/faqs/BCH/how-does-BCH-governance-work) can be read for the technical detail [here](https://github.com/bitjson/cashtokens). An excellent and more-approachable explanation of the benefits and power of CashTokens can be read by the CHIP author Jason Dreyzehner [here](https://blog.bitjson.com/cashtokens-v2/), [predecessor PMv3 here](https://blog.bitjson.com/pmv3-build-decentralized-applications-on-bitcoin-cash/#cashtokens-contract-based-tokens) and [the case for smart contracts on BCH](https://blog.bitjson.com/prediction-markets-on-bitcoin-cash/#why-bitcoin-cash). It is highly recommended to read those explanation before continuing on this page as the information will not be repeated.
+
+To summarise: CashTokens magnifies the power of smart contracts on Bitcoin Cash enormously to close or equivalent to EVM chains like Ethereum, while retaining low fees at scale with a >1 000x scaleability advantage over those competitors.
+
+## How is it different to EVM tokens, such as ERC-20 or ERC-721 tokens?
+
+EVM token standards run on "account model" chains, while CashTokens is on Bitcoin Cash, a "UTXO model" chain. This creates both a problem and an opportunity.
+
+The problem is that existing, proven open-source projects from token ecosystems on chains such as Ethereum (think [DEXes](/faqs/SmartBCH/what-is-a-decentralised-exchange) or financial tools like [lending protocol AAVE](https://aave.com/)) **cannot** be ported to CashTokens compatibility with only a few tweaks. Note: This WAS possible and leveraged for [SmartBCH](/faqs/SmartBCH/what-is-smart-bch), but is not possible for CashTokens. Instead, CashTokens equivalents or competitors for such services will need to be built entirely from scratch by the BCH community at the cost of significant developer resources and time.
+
+The opportunity is that CashTokens / the BCH community is trailblazing new ground in the cryptocurrency industry. If BCH can build a homegrown, in-demand set of products and tools around CashTokens, few other chains will be in position to attempt something similar (only UTXO chains such as Litecoin or Dash could conceivably try an analogous approach) and those that can will be well behind in terms of protocol development, community support, developer tooling, excitement and innovation. This could conceivably give BCH a hefty first-mover advantage and a commanding lead in the UTXO smart contract market - similar to the technical advantage, network effect and price performance gained (and sustained) by the Ethereum community after they pioneered ERC tokens and DeFi for EVM chains.
+
+## How is it different to SLP (Simple Ledger Protocol) tokens?
+
+SLP tokens was a previous somewhat-similar implementation of tokens on BCH. CashTokens is distinct from SLP in several ways:
+
+- **Miner validation**: Crucially, SLP tokens were **not miner validated** (they were built at a layer above the protocol), while BCH tokens **are miner validated** (they are native to the protocol). This means that SLP token transactions received by apps (e.g. wallets) had to check the entire history of each token to verify whether or not they were authentic. The more popular a token became, the slower the token apps became in response because the history of transfers to check got longer and longer. This problem was an even worse burden for SLP infrastructure, which had the same problem for EVERY kind of SLP token simultaneously. This meant much infrastructure was not high performing or well-maintained. In contrast, CashTokens transactions are valid by default if a wallet receives them (just as Bitcoin Cash transactions are) because nodes would not broadcast them and miners would not mine them in the first place if they weren't. Therefore successful CashTokens growth will not be hampered by a self-limiting negative feedback loop in the same way as SLP tokens were. No extra infrastructure for token validating is required either.
+- **Power**: SLP tokens covered a far more limited set of functionality (token creation, transfers, burning & dividend payments). CashTokens has the same power, but also generic power to do many things beyond that (such as communication between BCH controlling contracts). This suggests that many things can and will be built with CashTokens to drive engagement that were not even possible with SLP.
+- **Problems with non-integrated software**: SLP tokens could be accidentally burned by non-supporting BCH software - leading to frustrated users and ecosystem wide issues. CashTokens cannot be accidentally received (or burnt / lost) by wallets and applications that are not aware of it.
+
+Skeptics of CashTokens may note the high effort and low overall community support and success of SLP tokens and reasonably question if CashTokens is a lot of hype on a distraction that will end with similar long term results. Only time and proven success of CashTokens can refute those concerns, but the categoric difference in the tech and early indications of community enthusiasm bode well.
+
+## Can I try it?
+
+CashTokens is not yet live on the main network, so exciting consumer facing applications are still under development and testing, but it can be tested on "chipnet" with the following services:
+
+- [CashTokens Web Wallet](https://my-cashtokens-webwallet.netlify.app)
+- [CashTokens Faucet](https://tbch4.googol.cash)
+- [CashTokens Test Block Explorer](https://chipnet.imaginary.cash)
+
+One of the early promising applications, with a lot of work in a proof of concept is [JEDEX](https://blog.bitjson.com/jedex-decentralized-exchanges-on-bitcoin-cash/), a CashTokens decentralised exchange by Jason Dreyzehner.
+
+## Can I start developing on it?
+
+Yes, on chipnet. Along with the resources mentioned above, the following dev services are supporting CashTokens already.
+
+- [ChainGraph](https://try.chaingraph.cash/)
+- [Mainnet.cash](https://mainnet.cash/tutorial/#cashtokens)
+
+Watch the following guides:
+
+<ReactPlayer
+  style={{
+    paddingTop: 10,
+    paddingBottom: 40,
+    marginLeft: "auto",
+    marginRight: "auto",
+  }}
+  url={"https://www.youtube.com/watch?v=x5T0Pgwu83s"}
+  target="_blank"
+/>
+
+<ReactPlayer
+  style={{
+    paddingTop: 10,
+    paddingBottom: 40,
+    marginLeft: "auto",
+    marginRight: "auto",
+  }}
+  url={"https://www.youtube.com/watch?v=1yX0wzgYA_0"}
+  target="_blank"
+/>
+
+## How can I find out more?
+
+Follow the content of Jason Dreyzehner (CashTokens CHIP author) on [Twitter](https://twitter.com/bitjson) and [his blog](https://blog.bitjson.com/) and Mathieu Geukens at his [Twitter](https://twitter.com/GeukensMathieu) and [Youtube](https://www.youtube.com/@mrzwets). Of course, episodes of the Bitcoin Cash Podcast itself will be highlighting notable leaps forward in CashTokens development as and when they occur too.
+
+You can ask questions in the [Cash Tokens Dev Telegram](https://t.me/cashtoken_devs) and check out the [Bitcoin Cash Research thread on CashTokens](https://bitcoincashresearch.org/t/chip-2021-01-pmv3-version-3-transaction-format/265).
