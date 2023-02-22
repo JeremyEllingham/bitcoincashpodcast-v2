@@ -1,0 +1,69 @@
+---
+id: what-is-0-conf
+sidebar_position: 1
+title: What is 0-conf? Are BCH transactions instant?
+---
+
+import ReactPlayer from "react-player/youtube";
+
+Bitcoin Cash transactions (between non-custodial wallets, NOT to banking solutions like cryptocurrency exchanges) are, **in the vast majority of payment scenarios, effectively instant**. Take a look at these examples of demo and real world BCH usage, then read below for the finer details.
+
+<ReactPlayer
+  style={{
+    paddingTop: 10,
+    paddingBottom: 40,
+    marginLeft: "auto",
+    marginRight: "auto",
+  }}
+  url={"https://www.youtube.com/watch?v=Ml4fMFyY0iA"}
+  target="_blank"
+/>
+
+<ReactPlayer
+  style={{
+    paddingTop: 10,
+    paddingBottom: 40,
+    marginLeft: "auto",
+    marginRight: "auto",
+  }}
+  url={"https://youtu.be/LAywZg1TV5U?t=38"}
+  target="_blank"
+/>
+
+Bitcoin Cash network nodes (and therefore miners) follow a "first seen relay policy". This means that a submitted transaction will pre-empt conflicting transactions from being accepted into the mempool of nodes. Network propagation time is within moments (similar to a WhatsApp or Telegram message) and so the only way to create a double spend (without the cooperation of miners, see below) is to send a "fraud" transaction and a "takeback" transaction within milliseconds of each other and hope that the latter reaches more of the network purely by chance and despite its delay. This is not trivial to even attempt, requiring technical knowledge, planning and co-ordinated execution. You will not see someone able to try this kind of fraud while purchasing a slice of pizza in front of even the most inattentive retail assistant!
+
+Note that in 99.99%+ of cases, a Bitcoin Cash transaction will be accepted into the next block after it is sent. Transaction backlogs are fully cleared with each block except in very unusual cases. BCH has very reliable 0-confirmation acceptability, but it reinforces that with fast acceptance into the blockchain itself.
+
+Note also that it is up to the **receiving party** to determine when a transaction is "safe enough". Although nearly all BCH transactions will be fraud-free and are perfectly safe to consider instant, individual merchants, wallets or payment processing software may not instantly accept received BCH transactions as legitimate. The BCH community does the best it can to educate and encourage proper usage of 0-conf for the best payments experience, but it is ultimately up to the receiving individual to choose their own level of risk tolerance.
+
+## Double Spend Proofs (DSPs)
+
+The security of instant transactions on BCH has been upgraded with extra technology called "Double Spend Proofs". The highest potential for fraud occurs in the first couple of seconds after a transaction is sent as it propagates around the network to all BCH nodes and miners. Network nodes that receive conflicting transactions (in this initial high-risk window, or at any time) indicating a potential fraud attempt can publish a cryptographically verifiable alert to the rest of the node network. Receiving wallets or payment processors can display a notification to the user, and appropriate countermeasures taken (for instance, online goods marked for non-delivery & customer service investigation or no product handed over at a physical retailer). Remember that the risk of fraud is tiny, and of that risk the vast majority is in the first 2 seconds, so in practice even the fastest retail transaction still contains plenty of time for fraud to be detected, noticed & acted upon.
+
+# Miner cooperative fraud & collusion
+
+Large Bitcoin miners operate multi-million dollar industrial scale companies, and the cost ($10 000+), risk, reputational damage and time investment to attempt fraud collusion on every day payments means they never bother. The exception to this is payments to exchanges, see below.
+
+## Cryptocurrency Exchanges
+
+The major exception to 0-confirmation transactions is cryptocurrency exchanges. Cryptocurrency exchanges are often very conservative with crediting user deposits in BCH, potentially requiring 6 or even more confirmations to consider a transaction reliably accepted by the network. Unlike most other BCH economy participants, they are uniquely at high risk of double-spend fraud (user deposits BCH, swaps on the exchange for another cryptocurrency, withdraws that other cryptocurrency, then colludes with a miner to reverse the initial deposit and keep their original BCH as well). They also handle large time-sensitive payments regularly, so unlike most other parts of the economy they could be targeted for fraud by colluding with miners.
+
+It's also true that cryptocurrency exchanges often deal with 10+ (or even hundreds) of different cryptocurrencies in their daily operations. For this reason, they often do not support chain specific upgrades such as Double Spend Proofs, preferring the "confirmations = security" paradigm that can be applied across almost all cryptocurrencies with the lowest burden of individual customisation and maintenance for their technology teams. With increased BCH trade and community growth, hopefully exchanges will be motivated to improve BCH payments experience but until then slow interactions with exchanges are a fact of life. Remember the cryptocurrency motto of "not your keys, not your coins". BCH adopters should never hold their coins on exchange, and only deal with exchanges for the minimum possible time to preserve the security of their cryptocurrency and reduce the inconvenience of payment delays.
+
+## Zero-confirmation Escrows (ZCEs)
+
+A proposal exists for [ZCEs](https://github.com/bitjson/bch-zce), a system where users could guarantee their payment by backing it with an arbitrary amount of additional BCH collateral. For instance, I might make a payment for 1 BCH, and at the same time my wallet would announce "If anyone can produce cryptographic proof that this 1 BCH payment is fradulent, I have created an unrevokable 10 BCH bounty." In doing so, I have created a trustless signal that I will not attempt any fraud on my payment (losing the payment costs 1 BCH, but frauding would cost me 10 BCH!). If I don't intend to fraud, it costs me nothing to back up my payment with idle funds in my wallet for a couple of seconds in this way. Once fully implemented, this system could operate seamlessly in the background of all BCH payments - further strengthening 0 confirmation payment reliability.
+
+ZCEs are theoretical at this point in time. Fraud is so low in practice they have not been implemented, but it remains an eventual improvement the ecosystem will likely adopt.
+
+## BTC Misconceptions
+
+0-conf itself is actually not even a technical innovation, it's simply an inbuilt property of the way [Bitcoin was designed](/bitcoin.pdf) at inception. It is fairly obvious that Satoshi would not have bothered to invent "next generation" money that was slower than the existing payment options online in 2008. Unfortunately, the negative experience of slow, unreliable payments on BTC, which [is not the real Bitcoin](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin), has tarnished the reputation of Bitcoin as a poor payments solution.
+
+A restricted blocksize creates a double-blind auction for BTC transaction fees, making transaction inclusion in a block unreliable and therefore waiting times unpredictable. In addition, BTC added rules called "Replace By Fee" to their nodes, allowing transactions to be replaced with a higher fee. This makes unconfirmed transactions deliberately unreliable and increases payment risks for the receiving party (the sending party may fraudulently revoke the funds by respending with a higher fee to themselves). Although originally opt-in (which was already bad enough), this problem got worse when Bitcoin Core doubled down by providing an option for nodes to default ALL transactions, even the ones that did NOT volunteer for it, into optional respending ("Full RBF").
+
+This is one of the many [problems with BTC](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc).
+
+See also: [Is Bitcoin Cash (BCH) the real Bitcoin?](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin)
+
+See also: [What's wrong with Bitcoin BTC?](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc)
