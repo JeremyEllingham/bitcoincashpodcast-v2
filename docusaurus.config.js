@@ -26,19 +26,19 @@ module.exports = {
       items: [
         { to: "/start", label: "Start Here!", position: "left" },
         { to: "/about", label: "About", position: "left" },
-        { to: "/roadmap", label: "Roadmap", position: "left" },
+        { to: "/faqs", label: "FAQs", position: "left" },
         {
           type: "doc",
           docId: "welcome",
           position: "left",
           label: "Episodes",
         },
-        { to: "/music", label: "Music", position: "left" },
-        { to: "/faqs", label: "FAQs", position: "left" },
-        { to: "/stats", label: "Stats", position: "left" },
         { to: "/code", label: "Code", position: "left" },
+        { to: "/stats", label: "Stats", position: "left" },
+        { to: "/music", label: "Music", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/recommended", label: "Recommended", position: "left" },
+        { to: "/roadmap", label: "Roadmap", position: "left" },
       ],
     },
     footer: {
