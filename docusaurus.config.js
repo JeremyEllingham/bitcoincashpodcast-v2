@@ -162,6 +162,11 @@ module.exports = {
               href: "https://t.me/thebitcoincashpodcast_discussion",
             },
             {
+              label: "Reddit",
+              href: "https://www.reddit.com/r/BitcoinCashPodcast/",
+            },
+
+            {
               label: "Patreon",
               href: "https://www.patreon.com/bitcoincashpodcast",
             },
