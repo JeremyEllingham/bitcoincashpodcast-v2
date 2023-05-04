@@ -6,6 +6,7 @@ title: What about the Lightning Network?
 
 import ReactPlayer from "react-player/youtube";
 import lightningDebateUrl from "@site/static/img/faqs/LightningNetwork.png";
+import lightningForNowUrl from "@site/static/img/faqs/lightningForNow.jpg";
 
 <img src={lightningDebateUrl} alt="Lightning network discussion" />
 
@@ -31,6 +32,13 @@ per year with unlimited transactions inside the channel, it would require
 - **Fee Extraction**: Routing fees on Lightning Network are funds that otherwise would have been paid as on-chain fees to Bitcoin miners. In this way, the Lightning Network can potentially siphon away enough money to prevent Bitcoin miners earning enough from transaction fees to maintain chain security hashing power. It's possible eventually there will be enough activity to sustain both, but that is far from established (particularly with the low-volume, high-fees on-chain model of Bitcoin BTC). In this way, pre-emptive implementation of Lightning Network may parasitically destroy the long term security of the underlying chain - another reason BCH is not focussed on Lightning Network at this stage.
 
 For a big list of other bugs and issues with the Lightning Network, check out [this compilation](https://github.com/davidshares/Lightning-Network).
+
+<img
+  src={lightningForNowUrl}
+  alt="Lightning network destined to be custodial"
+/>
+
+Note that increasing on-chain BTC fees will eventually cut off consumer access to the Bitcoin blockchain entirely - thus isolating them into the Lightning Network and defeating the entire point of Bitcoin's self-custody of funds revolution.
 
 For a detailed breakdown of the forthcoming fee extraction and liquidity problems on Lightning Network, check out this video by Joël Valenzuela.
 
