@@ -2,6 +2,10 @@
 title: Code
 ---
 
+import forEVMdevs1Url from "@site/static/img/code/forEVMdevs1.png";
+import forEVMdevs2Url from "@site/static/img/code/forEVMdevs2.png";
+import ReactPlayer from "react-player/youtube";
+
 # Code
 
 Bitcoin Cash is a social movement, but it's also a technical project. The code that runs Bitcoin Cash nodes and miners is all open source, as are many BCH wallets and community tools, which means the full program is available for free for anyone to review, download, copy or submit updates.
@@ -22,6 +26,21 @@ Contributions (pull requests and suggestions) are always welcome from the commun
 
 ## Other BCH Development Resources
 
+### Podcast episodes
+
+To upskill on the BCH JS tech stack, highly recommended to listen to this episode of the Podcast:
+
+<ReactPlayer
+  style={{
+    paddingTop: 0,
+    paddingBottom: 20,
+  }}
+  url={"https://www.youtube.com/watch?v=MdZUcCjkY6A"}
+  target="_blank"
+/>
+
+### Background material
+
 A lot of good BCH background material can be found at:
 
 - [Developers.cash](https://developers.cash/)
@@ -33,7 +52,7 @@ A lot of good BCH background material can be found at:
 - [Smart contracts on ETH, BTC, BCH](https://kalis.me/smart-contracts-eth-btc-bch/)
 - Check out the [FAQ page on CashTokens](/faqs/Tech/what-is-cashtokens)
 
-For building JavaScript applications
+### For building JavaScript applications
 
 - [Libauth](https://github.com/bitauth/libauth)
 - [Chaingraph API](https://chaingraph.cash/)
@@ -45,16 +64,18 @@ For building JavaScript applications
 - [Unspent App for CashScript Contracts](https://unspent.app/)
 - [CashScript Updates Twitter](https://twitter.com/CashScriptBCH)
 
-Other languages
+### Other languages
 
 - [BitcoinCashClient](https://github.com/david-shattuck/BitcoinCashClient): For C# .Net
 
-Tutorials
+### Tutorials
 
 - [CashScript Tutorial videos](https://www.youtube.com/watch?v=uzzUEQSKTh4)
 - [Permissionless Software Foundation videos](https://www.youtube.com/@permissionlesssoftwarefoun3626)
 
 Block explorers and other metric tracking sites can be found on the [Stats page](/stats#on-chain-bch-data).
+
+### Full nodes
 
 Full-node dev teams can be found at:
 
@@ -65,9 +86,21 @@ Full-node dev teams can be found at:
 - [Knuth](https://github.com/k-nuth/kth)
 - [Flowee](https://flowee.org/)
 
+### More
+
 For contributing to community projects and information sources:
 
 - [Use.cash code](https://github.com/marcfalzon/usecash)
+
+## For EVM Developers
+
+Welcome! Note that BCH is a UTXO chain and quite different to what you may be used to. This has a bit of a learning curve, however, it comes with a lot of advantages:
+
+<img src={forEVMdevs1Url} alt="UTXO model advantages" />
+
+<img src={forEVMdevs2Url} alt="UTXO model advantages 2" />
+
+[Original source](https://twitter.com/bitjson/status/1658158652870598656)
 
 ## BCH Developer Community
 
