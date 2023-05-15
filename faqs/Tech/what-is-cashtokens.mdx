@@ -17,7 +17,9 @@ import ReactPlayer from "react-player/youtube";
   target="_blank"
 />
 
-CashTokens is an upgrade to the Bitcoin Cash protocol that added two new primitives - fungible and non-fungible tokens (FTs & NFTs). This summary understates the power of the upgrade as tokens on other chains are frequently frivolous financial rehypothication schemes or scams while NFTs on other chains are famous mostly as "collectible monkey pictures" (like the [Bored Ape Yacht Club on Ethereum](https://opensea.io/collection/boredapeyachtclub)). CashTokens is better understood as adding internal state (programmatic power) and inter-contract communication to Bitcoin Cash contracts / transactions (although it can of course also do token schemes and tradeable monkey pictures). For further discussion of these two layers of capability, see [here](https://www.reddit.com/r/btc/comments/12qgfvz/key_issues_for_next_generation_wallets_to_support/)
+CashTokens is an upgrade to the Bitcoin Cash protocol that added two new primitives - fungible and non-fungible tokens (FTs & NFTs). This summary understates the power of the upgrade as tokens on other chains are frequently frivolous financial rehypothication schemes or scams while NFTs on other chains are famous mostly as "collectible monkey pictures" (like the [Bored Ape Yacht Club on Ethereum](https://opensea.io/collection/boredapeyachtclub)). CashTokens is better understood as adding internal state (programmatic power) and inter-contract communication to Bitcoin Cash contracts / transactions (although it can of course also do token schemes and tradeable monkey pictures). For further discussion of these two layers of capability, see [here](https://www.reddit.com/r/btc/comments/12qgfvz/key_issues_for_next_generation_wallets_to_support/).
+
+Note that CashTokens is NOT itself an independent collectible token or purchasable item. It is instead an upgrade to BCH Layer 1 that (among other things) allows individuals to create or trade their own or other people's tokens.
 
 CashTokens "locked-in" for implementation in November 2022, and went live on the main network (mainnet) in the BCH network upgrade on 15th May 2023. Consumer facing wallet integrations and apps are beginning to roll out.
 
@@ -35,9 +37,9 @@ The opportunity is that CashTokens / the BCH community is trailblazing new groun
 
 ## How is it different to SLP (Simple Ledger Protocol) tokens?
 
-SLP tokens was a previous somewhat-similar implementation of tokens on BCH. CashTokens is distinct from SLP in several ways:
+SLP tokens was a previous somewhat-similar implementation of tokens on BCH. CashTokens is distinct from SLP in several important ways:
 
-- **Miner validation**: Crucially, SLP tokens were **not miner validated** (they were built at a layer above the protocol), while BCH tokens **are miner validated** (they are native to the protocol). This means that SLP token transactions received by apps (e.g. wallets) had to check the entire history of each token to verify whether or not they were authentic. The more popular a token became, the slower the token apps became in response because the history of transfers to check got longer and longer. This problem was an even worse burden for SLP infrastructure, which had the same problem for EVERY kind of SLP token simultaneously. This meant much infrastructure was not high performing or well-maintained. In contrast, CashTokens transactions are valid by default if a wallet receives them (just as Bitcoin Cash transactions are) because nodes would not broadcast them and miners would not mine them in the first place if they weren't. Therefore successful CashTokens growth will not be hampered by a self-limiting negative feedback loop in the same way as SLP tokens were. No extra infrastructure for token validating is required either.
+- **Miner validation**: Crucially, SLP tokens were **not miner validated** (they were built at a layer above the protocol), while BCH tokens **are miner validated** (they are native to the protocol). This means that SLP token transactions received by apps (e.g. wallets) had to check the entire history of each token to verify whether or not they were authentic. The more popular a token became, the slower the token apps became in response because the history of transfers to check got longer and longer. This problem was an even worse burden for SLP infrastructure, which had the same problem for EVERY kind of SLP token simultaneously. This meant most SLP infrastructure was not high performing or well-maintained. In contrast, CashTokens transactions are valid by default if a wallet receives them (just as Bitcoin Cash transactions are) because nodes would not broadcast them and miners would not mine them in the first place if they weren't. Therefore successful CashTokens growth will not be hampered by a self-limiting negative feedback loop in the same way as SLP tokens were. No extra infrastructure for token validating is required either.
 - **Power**: SLP tokens covered a far more limited set of functionality (token creation, transfers, burning & dividend payments). CashTokens has the same power, but also generic power to do many things beyond that (such as communication between BCH controlling contracts). This suggests that many things can and will be built with CashTokens to drive engagement that were not even possible with SLP.
 - **Problems with non-integrated software**: SLP tokens could be accidentally burned by non-supporting BCH software - leading to frustrated users and ecosystem wide issues. CashTokens cannot be accidentally received (or burnt / lost) by wallets and applications that are not aware of it.
 
@@ -45,7 +47,19 @@ Skeptics of CashTokens may note the high effort and low overall community suppor
 
 ## Can I try it?
 
-CashTokens is not yet live on the main network, so exciting consumer facing applications are still under development and testing, but it can be tested on "chipnet" with the following services:
+Yes. CashTokens is relatively new, so exciting consumer facing applications are in their infancy.
+
+### Emerald DAO
+
+Emerald DAO is a proof of concept BCH CashTokens app that mints NFTs for timelocked "safe boxes" of BCH which earn a bonus based on donations hoping to incentivise locked BCH (ie improving currency liquidity and encouraging users to withdraw from centralised exchanges).
+
+For an explanation of what this is, see the [introduction post](https://www.reddit.com/r/cashtokens/comments/134ghje/i_present_you_the_emerald_vault_dao_powered_by/).
+
+See the instructions from developer bitcoincashautist [here](https://www.reddit.com/r/cashtokens/comments/13ibe1c/how_do_i_get_emerald_dao_token/).
+
+### Testnet
+
+CashToksn can be tested on "chipnet" with the following services:
 
 - [CashTokens Web Wallet](https://my-cashtokens-webwallet.netlify.app)
 - [CashTokens Faucet](https://tbch4.googol.cash)
