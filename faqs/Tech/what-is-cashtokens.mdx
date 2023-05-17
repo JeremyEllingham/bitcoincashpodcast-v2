@@ -21,11 +21,19 @@ CashTokens is an upgrade to the Bitcoin Cash protocol that added two new primiti
 
 Note that CashTokens is NOT itself an independent collectible token or purchasable item. It is instead an upgrade to BCH Layer 1 that (among other things) allows individuals to create or trade their own or other people's tokens.
 
-CashTokens "locked-in" for implementation in November 2022, and went live on the main network (mainnet) in the BCH network upgrade on 15th May 2023. Consumer facing wallet integrations and apps are beginning to roll out.
+CashTokens "locked-in" for implementation in November 2022, and went live on the main network (mainnet) in the [BCH network upgrade on 15th May 2023](/faqs/BCH/how-does-BCH-governance-work#2023-upgrade-livestream). Consumer facing wallet integrations and apps are beginning to roll out.
 
 The [CHIP spec](/faqs/BCH/how-does-BCH-governance-work) can be read for the technical detail [here](https://github.com/bitjson/cashtokens). An excellent and more-approachable explanation of the benefits and power of CashTokens can be read by the CHIP author Jason Dreyzehner [here](https://blog.bitjson.com/cashtokens-v2/), [predecessor PMv3 here](https://blog.bitjson.com/pmv3-build-decentralized-applications-on-bitcoin-cash/#cashtokens-contract-based-tokens) and [the case for smart contracts on BCH](https://blog.bitjson.com/prediction-markets-on-bitcoin-cash/#why-bitcoin-cash). It is highly recommended to read those explanation before continuing on this page as the information will not be repeated.
 
 To summarise: CashTokens magnifies the power of smart contracts on Bitcoin Cash enormously to close or equivalent to EVM chains like Ethereum, while retaining low fees at scale with a >1 000x scaleability advantage over those competitors.
+
+## Are CashTokens addresses different to regular BCH addresses (cash addresses)?
+
+Yes.
+
+A regular cash address looks like `bitcoincash:qqkgjxugt4w45zvy7fmdnwegmrrgmt7y0vvarce0zs`, note the starting `q`. A CashTokens "token aware" address looks like `bitcoincash:zqkgjxugt4w45zvy7fmdnwegmrrgmt7y0vthsxhfar`, starting instead with a `z`. Regular BCH can be sent to a CashTokens address, but CashTokens cannot be sent to a regular cash address. The reason for having a new type of addresses is to prevent users from sending CashTokens to wallets that have not upgraded yet or that choose not to support CashTokens for some reason. CashTokens is likely to quickly become an industry standard feature within the BCH community, but certainly may take longer to spread into the broader cryptocurrency ecosystem (for instance, on large exchanges), where BCH specific features may not be a development priority.
+
+Although wallets will not enable doing so, even if a user somehow does manage to send tokens to a regular cash address, it is impossible to respend or burn those tokens accidentally. The seed phrase from that wallet can be imported into a token-supporting wallet in order to get access to the tokens.
 
 ## How is it different to EVM tokens, such as ERC-20 or ERC-721 tokens?
 
@@ -45,9 +53,19 @@ SLP tokens was a previous somewhat-similar implementation of tokens on BCH. Cash
 
 Skeptics of CashTokens may note the high effort and low overall community support and success of SLP tokens and reasonably question if CashTokens is a lot of hype on a distraction that will end with similar long term results. Only time and proven success of CashTokens can refute those concerns, but the categoric difference in the tech and early indications of community enthusiasm bode well.
 
+## Does adding CashTokens cause problems for BCH scaleability?
+
+No.
+
+Some Bitcoin Cashers, cognisant of the mission to [become global reserve currency](/faqs/Podcast/what-do-you-mean-global-reserve-currency) and the technical challenges inherit in that, may feel concerned that CashTokens will prove a problematic burden at scale for Bitcoin Cash's scaleability.
+
+As mentioned above, CashTokens have been integrated with incredible care and attention directly into the protocol. The performance requirements of miners and nodes doing marginal extra validation on CashTokens transactions is negligible and the performance upside (relieving the need for extra indexers and validation at the wallet or app layer) is enormous. If Bitcoin Cash is going to have more powerful scripting and token systems, this is the most scaleable way to do it.
+
+This may also be related to concerns that Bitcoin Cash should be "just cash", and not divert to token ecosystems, scripts or other more advanced cryptocurrency functionality. ~~. There are other cryptocurrencies which take a more "cash only" approach such as [Monero](/faqs/Cryptocurrency/what-about-monero-xmr) and [Nano](/faqs/Cryptocurrency/what-about-nano-xno) and users that feel strongly about that direction can investigate those projects. Note that other such projects may actually scale worse than Bitcoin Cash for .
+
 ## Can I try it?
 
-Yes. CashTokens is relatively new, so exciting consumer facing applications are in their infancy.
+Yes. All you need is a wallet upgraded for CashTokens. CashTokens is relatively new, so exciting consumer facing applications are in their infancy.
 
 ### Emerald DAO
 
@@ -59,7 +77,7 @@ See the instructions from developer bitcoincashautist [here](https://www.reddit.
 
 ### Testnet
 
-CashToksn can be tested on "chipnet" with the following services:
+CashTokens can be tested on "chipnet" with the following services:
 
 - [CashTokens Web Wallet](https://my-cashtokens-webwallet.netlify.app)
 - [CashTokens Faucet](https://tbch4.googol.cash)
