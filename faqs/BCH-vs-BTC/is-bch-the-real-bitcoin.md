@@ -12,7 +12,7 @@ import whitepaperUrl from "@site/static/img/about/whitepaper.png";
 
 From: [The Bitcoin whitepaper](/bitcoin.pdf)
 
-Bitcoin has no owner, and is not defined by law, by Bitcoin exchanges, or by anything other than the decision of people around the world. Like everything else about Bitcoin, its very definition is decentralised. The answer is up to you (and [everyone in the world](/faqs/Podcast/what-do-you-mean-global-reserve-currency)) to decide for themselves.
+Bitcoin has no owner, and is not defined by law, by Bitcoin exchanges, or by anything other than the decision of people around the world. Like everything else about Bitcoin, its very definition is decentralised. The answer is up to you (and [everyone in the world](/faqs/Global-Reserve-Currency/what-do-you-mean-reserve-currency)) to decide for themselves.
 
 The Bitcoin Cash community (and The Bitcoin Cash Podcast) adamantly maintains that Bitcoin Cash (BCH) **is** Bitcoin, and Bitcoin (BTC) **is not** Bitcoin. The sentiment runs in reverse too, with some BTC supporters [attempting to marginalise BCH as "Bcash"](/faqs/Other/whats-with-the-name-bcash).
 
