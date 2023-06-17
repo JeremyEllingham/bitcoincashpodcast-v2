@@ -8,17 +8,35 @@ Yes.
 
 Currently the Bitcoin Cash network allows 32 MB blocks, with some miners individually setting a soft-cap on their own block production at a lower value.
 
-After [splitting with Bitcoin Core in 2017]((/start#episode-8-of-10-bitcoin-cash)), the Bitcoin Cash community initially raised the blocksize limit to 8MB. This was increased again in 2018 to the current 32 MB limit. [Work is currently underway](https://bitcoincashresearch.org/t/assessing-the-scaling-performance-of-several-categories-of-bch-network-software/754) to raise the limit to 256 MB.
+After [splitting with Bitcoin Core in 2017](/start#episode-8-of-10-bitcoin-cash), the Bitcoin Cash community initially raised the blocksize limit to 8MB. This was increased again in 2018 to the current 32 MB limit. [Work is currently underway](https://bitcoincashresearch.org/t/assessing-the-scaling-performance-of-several-categories-of-bch-network-software/754) to raise the limit to 256 MB.
 
-Some people, most notably advocates of Bitcoin SV (frequently former or concurrent Bitcoin Cash adopters), remain perpetually concerned over the issue of blocksize limit. They believe having a limit at all is indicative of "central control" in BCH. They advocate strongly for the agency of miners to decide what is an appropriate blocksize, surely it would be better to have no limit & allow the free market to set the appropriate size of blocks? They foresee potential for the Bitcoin Cash community to repeat the mistakes of the past, and refuse to scale the blocks with growing demand as [happened with BTC](/start#episode-8-of-10-bitcoin-cash).
+## Arguments to remove a limit
+
+Some people, most notably advocates of Bitcoin SV (frequently former or concurrent Bitcoin Cash adopters), remain perpetually concerned over the issue of blocksize limit. Arguments to remove a limit generally fall into the following categories:
+
+- **Centralised control**: Having a limit at all is "proof" there is "central control" of BCH. Who decides the right limit?
+- **Miner agency / free market approach**: Shouldn't miners decide for themselves what is an appropriate blocksize, surely it would be better to have no limit & allow the free market to set the appropriate size of blocks?
+- **Demand discouraging**: Restricting current capacity signals large corporations or potential demand to avoid joining the community. Companies will not even consider building applications on BCH if they can't be assured the capacity to serve their large user bases will be available for their applications.
+- **Historical lessons**: Isn't there potential for the Bitcoin Cash community to hit the same roadblock as the pre-split Bitcoin and refuse to scale the blocks with growing demand as [happened with BTC](/start#episode-8-of-10-bitcoin-cash)? Those who don't learn the mistakes of history are doomed to repeat them.
 
 Although these concerns are understandable (particularly in light of history), the arguments for removing a blocksize limit are naive and lack nuance.
 
+### Importance of a blocksize limit
+
+- **Central control** Central control of Bitcoin Cash is a myth. The [CHIP process](/faqs/BCH/how-does-BCH-governance-work) has been developed specifically to address previous problems of centralising influence in the community. The BSV adopters that believe in central control (which they can never clearly identify the source of) are overlooking their own rejection from the community & subsequent rejection of XEC as demonstrations of the community collectively determining its own direction in an organic process.
+- **Miner agency / free market approach**: The limit is intended to stay well above realistic demand at all times. Miners are able to accomodate their own situation by setting soft caps on their own blocks below the limit, as many do.
+- **Demand discouraging**: Stability & predictability is an important engineering concern. However, no large company appears in the ecosystem of any blockchain suddenly adding millions of transactions with no warning. Adoption is an ongoing, organic process. The engineers at interested companies will prudently start a new initiative small and with a testing phase and also will make themselves known to the community to discuss in cases where engineering limits are a concern to them.
+
 ## Adaptive blocksize limit
 
-While having no limit is foolish, the BCH community does recognise that the coordination cost of raising the limit each time is substantial & potential for splitting the community over a divisive issue does exist. To address these concerns, discussion is currently underway over the idea of [having an automatically adapting blocksize](https://bitcoincashresearch.org/t/general-protocols-opinions-and-considerations-on-a-maxblocksize-adjustment-scheme/1082).
+While having no limit is foolish, the BCH community does recognise that the coordination cost of raising the limit each time is substantial & potential for splitting the community over a divisive issue does exist. To address these concerns, discussion is currently underway over the idea of having an automatically adapting blocksize.
 
-This 
+- [Source 1](https://bitcoincashresearch.org/t/chip-2023-01-excessive-block-size-adjustment-algorithm-ebaa-based-on-weighted-target-exponential-moving-average-wtema-for-bitcoin-cash/1037)
+- [Source 2](https://bitcoincashresearch.org/t/asymmetric-moving-maxblocksize-based-on-median/197)
+- [Source 3](https://bitcoincashresearch.org/t/general-protocols-opinions-and-considerations-on-a-maxblocksize-adjustment-scheme/1082)
+
+This approach tackles the valid concerns over limit management without blithely removing all limits. Even if implemented, the community could always modify or update the algorithm through the [CHIP process](/faqs/BCH/how-does-BCH-governance-work) if unexpected problems or further learning occurred.
 
 See also: [Can Bitcoin Cash scale technically to global reserve currency?](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency)
 
+See also: [How does Bitcoin Cash governance / updates work?](/faqs/BCH/how-does-BCH-governance-work)
