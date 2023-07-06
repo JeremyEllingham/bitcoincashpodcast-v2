@@ -21,7 +21,7 @@ function HomepageHeader() {
             marginLeft: "auto",
             marginRight: "auto",
           }}
-          url={"https://www.youtube.com/watch?v=yM4gNVme5a0"}
+          url={"https://www.youtube.com/watch?v=ixpuLmvNel4"}
           target="_blank"
         />
         <div className={styles.buttons}>
