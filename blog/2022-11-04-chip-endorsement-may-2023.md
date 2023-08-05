@@ -35,4 +35,4 @@ Jeremy
 
 [Jason Dreyzehner's Blog post on 2023 CHIPs](https://blog.bitjson.com/bitcoin-cash-upgrade-2023/)
 
-[FAQ on Bitcoin Cash governance](/faqs/BCH/how-does-BCH-governance-work)
+[FAQ on Bitcoin Cash governance](/faqs/Decentralisation/how-does-BCH-governance-work)
