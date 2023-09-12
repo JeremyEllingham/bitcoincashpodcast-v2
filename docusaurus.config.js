@@ -35,7 +35,7 @@ module.exports = {
           position: "left",
           label: "Episodes",
         },
-        { to: "/music", label: "Music", position: "left" },
+        { to: "/media", label: "Media", position: "left" },
         { to: "/stats", label: "Stats", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/roadmap", label: "Roadmap", position: "left" },
@@ -60,8 +60,8 @@ module.exports = {
               to: "/docs/welcome",
             },
             {
-              label: "Music",
-              to: "/music",
+              label: "Media",
+              to: "/media",
             },
             {
               label: "FAQs",
