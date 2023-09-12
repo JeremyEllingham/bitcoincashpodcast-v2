@@ -90,7 +90,7 @@ function HomepageHeader3() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/welcome"
+            to="/episodes/welcome"
           >
             Listen To More
           </Link>
@@ -127,7 +127,7 @@ function HomepageHeader4() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/welcome"
+            to="/episodes/welcome"
           >
             Listen To More
           </Link>

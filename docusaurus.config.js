@@ -37,7 +37,6 @@ module.exports = {
         },
         { to: "/media", label: "Media", position: "left" },
         { to: "/stats", label: "Stats", position: "left" },
-        { to: "/blog", label: "Blog", position: "left" },
         { to: "/roadmap", label: "Roadmap", position: "left" },
       ],
     },
@@ -57,7 +56,7 @@ module.exports = {
             },
             {
               label: "Episodes",
-              to: "/docs/welcome",
+              to: "/episodes/welcome",
             },
             {
               label: "Media",
@@ -214,6 +213,8 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          path: "episodes",
+          routeBasePath: "episodes",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/JeremyEllingham/bitcoincashpodcast-v2",
         },
