@@ -37,7 +37,6 @@ module.exports = {
         },
         { to: "/media", label: "Media", position: "left" },
         { to: "/stats", label: "Stats", position: "left" },
-        { to: "/roadmap", label: "Roadmap", position: "left" },
       ],
     },
     footer: {
