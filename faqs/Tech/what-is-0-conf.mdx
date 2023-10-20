@@ -5,6 +5,7 @@ title: What is 0-conf? Are BCH transactions instant?
 ---
 
 import ReactPlayer from "react-player/youtube";
+import firstSeenWhitepaper from "@site/static/img/faqs/firstSeenWhitepaper.jpg";
 
 Bitcoin Cash transactions (between non-custodial wallets, NOT to banking solutions like cryptocurrency exchanges) are, **in the vast majority of payment scenarios, effectively instant**. Take a look at these examples of demo and real world BCH usage, then read below for the finer details.
 
@@ -71,7 +72,13 @@ ZCEs are theoretical at this point in time. Fraud is so low in practice they hav
 
 0-conf itself is actually not even a technical innovation, it's simply an inbuilt property of the way [Bitcoin was designed](/bitcoin.pdf) at inception. It is fairly obvious that Satoshi would not have bothered to invent "next generation" money that was slower than the existing payment options online in 2008. Unfortunately, the negative experience of slow, unreliable payments on BTC, which [is not the real Bitcoin](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin), has tarnished the reputation of Bitcoin as a poor payments solution.
 
+<img src={firstSeenWhitepaper} alt="First seen whitepaper" />
+
+_Satoshi mentioned the first seen property in the whitepaper directly. However, the [first version of the Bitcoin code](https://github.com/trottier/original-bitcoin/blob/master/src/main.cpp#L434) did allow replacing transactions, which was updated once it became a DDoS vulnerability._
+
 A restricted blocksize creates a double-blind auction for BTC transaction fees, making transaction inclusion in a block unreliable and therefore waiting times unpredictable. In addition, BTC added rules called "Replace By Fee" to their nodes, allowing transactions to be replaced with a higher fee. This makes unconfirmed transactions deliberately unreliable and increases payment risks for the receiving party (the sending party may fraudulently revoke the funds by respending with a higher fee to themselves). Although originally opt-in (which was already bad enough), this problem got worse when Bitcoin Core doubled down by providing an option for nodes to default ALL transactions, even the ones that did NOT volunteer for it, into optional respending ("Full RBF").
+
+As of 2023, the removal of the first seen policy & introduction of compulsory Replace-By-Fee remains controversial to prominent members of the BTC community such as John Carvalho of Synonym & Sergej Kotliar of the payment focussed Bitrefill team.
 
 This is one of the many [problems with BTC](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc).
 

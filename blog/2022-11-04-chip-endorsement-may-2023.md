@@ -13,7 +13,7 @@ The Bitcoin Cash Podcast wholeheartedly supports the November lock-in and May im
 - [CHIP-2021-01 Restrict Transaction Version](https://gitlab.com/bitcoin.cash/chips/-/blob/3b0e5d55e1e139046794e850287b7acb795f4e66/CHIP-2021-01-Restrict%20Transaction%20Versions.md)
 - [CHIP-2021-01 Minimum Transaction Size](https://gitlab.com/bitcoin.cash/chips/-/blob/00e55fbfdaacf1436e455289086d9b4c6b3e7306/CHIP-2021-01-Allow%20Smaller%20Transactions.md)
 - [CHIP-2022-02 CashTokens](https://github.com/bitjson/cashtokens)
-- [CHIP-2022-05 P2SH32](<https://gitlab.com/0353F40E/p2sh32/-/blob/f58ecf835f58555c9087c53af25da92a0e74534c/CHIP-2022-05_Pay-to-Script-Hash-32_(P2SH32)_for_Bitcoin_Cash.md>)
+- CHIP-2022-05 P2SH32 See: https://gitlab.com/0353F40E/p2sh32/-/blob/f58ecf835f58555c9087c53af25da92a0e74534c/CHIP-2022-05_Pay-to-Script-Hash-32_(P2SH32)_for_Bitcoin_Cash.md
 
 I have reviewed the CHIP documents in some detail. A full breakdown and discussion will be done on an upcoming episode of the show, perhaps after the St Kitts conference.
 
