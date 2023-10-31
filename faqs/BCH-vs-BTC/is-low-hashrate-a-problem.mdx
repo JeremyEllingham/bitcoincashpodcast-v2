@@ -4,13 +4,19 @@ sidebar_position: 8
 title: Is low hashrate a problem?
 ---
 
-_There's no shot clock for BCH to regain majority hashrate. Nor is there any limiting factor on upward speed of return._
+import profitabilityUrl from "@site/static/img/faqs/profitability.png";
+
+import howManyConfsUrl from "@site/static/img/faqs/howmanyconfs.png";
+
+<img src={profitabilityUrl} alt="Demonstration of profitability" />
+
+_A demonstration of the magic of the free market. With no central actor, Bitcoin miners allocate hashrate as the market continually evaluates their relative merits._
 
 Profit-seeking miners naturally split their mining between BTC and BCH until the coins reach [equal profitability](https://cash.coin.dance/blocks/profitability). What this means is, the ratio of BTC:BCH mining hashrate floats at roughly the the same as the BTC:BCH price ratio. If BTC:BCH is 1:100 in market price, then BTC will have roughly 100x as much hashrate and BCH will have roughly 1% of the hash rate of BTC.
 
 This raises questions about whether or not BCH could be "51% attacked", and thus be an insecure coin.
 
-Low hash rate on BCH is not ideal, and it would unquestionably be better if it could take more hash rate from BTC. Despite the [many reasons](/faqs/BCH/why-bitcoin-cash) to prefer BCH, hash rate is one of the [few reasons](/faqs/BCH/why-not-bitcoin-cash) to prefer BTC or another coin currently.
+Low hash rate on BCH is not ideal, and it would unquestionably be better if it could take more hash rate from BTC. Despite the [many reasons](/faqs/BCH/why-bitcoin-cash) to prefer BCH, hash rate is one of the [few reasons](/faqs/BCH/why-not-bitcoin-cash) to prefer BTC or another coin currently. Importantly however, there's no "shot clock" or deadline for BCH to regain majority hashrate. Nor is there any limiting factor on upward speed of return.
 
 The BCH community has a very clear, sustainable plan to improve the hash rate: [spread adoption](/faqs/BCH/is-bch-spreading), grow the coin's utility, which will (eventually) [increase the price](/faqs/BCH-vs-BTC/if-bch-is-so-great-why-is-the-price-low) and attract mining hash rate by default. This is not a quick fix, but it is a permanent one.
 
@@ -24,6 +30,16 @@ It is important to note that BCH has a difficulty algorithm that adjusts every b
 Furthermore, to protect against any sudden mining attacks, BCH has a 10-block rolling checkpoint system. This finalizes coins that are (on average) 100 minutes (a little less than two hours) old, as nodes will ignore a wildly different chain that appears from nowhere as an attack. As mentioned before, the need for this is not ideal, but it's a measure in place to mitigate risk in the short term while growing adoption and price and hash rate can occur to fix it in the long term.
 
 Also note that the hash rate = price equation cuts both ways. While BCH has a low price (relative to BTC), it recieves a low hash rate. However, a rising price will organically (and inevitably) bring increased hash rate to BCH. At the same time, it sucks hash rate away from BTC. Increasing price and increasing coin security can compound on each other in a virtuous cycle, which could potentially create a scenario where BCH rapidly climbs past BTC (which would have falling hash rate, potentially triggering a fall in price, repeat).
+
+## BTC propaganda
+
+<img src={howManyConfsUrl} alt="How many confs screenshot" />
+
+_Propaganda is only visible to eagle-eyed critical thinkers or those with the requisite background knowledge._
+
+Criticising the low BCH hashrate, while partially valid, is often overblown or misunderstood in a classic case of [extreme propaganda](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc). One thing often mentioned in this "analysis" is [howmanyconfs.com](https://howmanyconfs.com/), a site which purports to demonstrate how relatively quickly BTC transactions are secure in comparison to BCH or other coins. The most important part of the site is not actually listed on the site at all, which is the [extensive clarifying note](https://github.com/lukechilds/howmanyconfs.com/blob/master/README.md#how-are-these-values-calculated) that adds a lot of caveats & explanations to the calculations displayed. This critically relevant information is only available from the tiny asterisk * next to "equivalent" in the title, which is an obvious demonstration of the way true information presented without relevant or visible context can deliberately create a totally false imputation.
+
+## SegWit incident
 
 After the BTC/BCH fork, some investors accidentally sent BCH to BTC SegWit addresses. These coins got stuck because BCH does not have SegWit. BCH had a specific upgrade so that miners could return those coins to their owners. One miner decided to try and steal these coins as SegWit allows them to be "spent by everyone". BTC.com and BTC.top came together and [saved those coins](https://blog.coinbase.com/a-deep-dive-into-the-recent-bch-hard-fork-incident-2ee14132f435) and returned them to their owners. This was a chain reorganisation, similar to the ones that [happen on BTC](https://www.coindesk.com/tech/2021/01/21/the-bitcoin-double-spend-that-never-happened/). This incident is sometimes mislabelled as a "51% attack" to attempt to smear the security of the BCH chain.
 
