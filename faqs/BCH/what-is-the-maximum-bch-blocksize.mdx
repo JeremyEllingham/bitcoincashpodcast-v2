@@ -4,11 +4,15 @@ sidebar_position: 11
 title: What is the maximum Bitcoin Cash blocksize? What is ABLA?
 ---
 
-import ReactPlayer from "react-player/youtube";
+import ABLAexampleURL from "@site/static/img/faqs/ABLAexample.png";
 
 The current Bitcoin Cash maximum blocksize is 32 MB. Some miners have locally set "soft limits" at lower amounts (typically 8 MB) due to the current infrequency of greater traffic.
 
 In May 2024, the Bitcoin Cash network will upgrade to "ABLA", the [Adaptive Blocksize Limit Algorithm](https://gitlab.com/0353F40E/ebaa). Starting from a guaranteed minimum of 32 MBs & with no (eventual) upper bound, it will increase or decrease blocksizes according to real network traffic (observed blocksizes). The maximum increase is 2x per year if all blocks are 100% full, but under realistic conditions this is unlikely.
+
+<img src={ABLAexampleURL} alt="ABLA Example url" />
+
+_One example scenario showing ABLA adjustments in response to varying blocksizes. More scenarios & analysis can be found in [the CHIP document](https://gitlab.com/0353F40E/ebaa)._
 
 The algorithm intelligently adapts to sudden, large demand spikes by allowing rapid initial increases which it slows if upward momentum is too fast. It also decreases blocksizes if capacity is excessive for long periods of time, to reduce burden on infrastructure providers. Once implemented, the Bitcoin Cash community can spend its energy attacking other problems than debating a perfect size & coordinating an upgrade, hopefully in perpetuity.
 
