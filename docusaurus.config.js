@@ -24,7 +24,7 @@ module.exports = {
         src: "img/bch.png",
       },
       items: [
-        { to: "https://flipstarter.bitcoincashpodcast.com", label: "Flipstarter", position: "left" },
+        // { to: "https://flipstarter.bitcoincashpodcast.com", label: "Flipstarter", position: "left" },
         { to: "/start", label: "Start Here!", position: "left" },
         { to: "/about", label: "About", position: "left" },
         { to: "/faqs", label: "FAQs", position: "left" },
@@ -36,8 +36,8 @@ module.exports = {
           position: "left",
           label: "Episodes",
         },
-        { to: "/media", label: "Media", position: "left" },
-        { to: "/stats", label: "Stats", position: "left" },
+        { to: "/music", label: "Music", position: "left" },
+        { to: "/more", label: "More", position: "left" },
       ],
     },
     footer: {
@@ -227,11 +227,13 @@ module.exports = {
         },
         gtag: {
           // You can also use your "G-" Measurement ID here.
+          // trackingID: "x", // For local dev purposes
           trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
         },
         googleAnalytics: {
+          // trackingID: "x", // For local dev purposes
           trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
