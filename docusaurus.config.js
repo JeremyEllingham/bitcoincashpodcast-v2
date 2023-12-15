@@ -59,8 +59,8 @@ module.exports = {
               to: "/episodes/welcome",
             },
             {
-              label: "Media",
-              to: "/media",
+              label: "More",
+              to: "/more",
             },
             {
               label: "FAQs",
