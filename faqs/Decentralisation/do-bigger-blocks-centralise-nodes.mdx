@@ -5,13 +5,36 @@ title: Do bigger blocks centralise nodes?
 ---
 
 import BitcoinForksUrl from "@site/static/img/faqs/BitcoinForks.png";
+import ScalingHardwareUrl from "@site/static/img/faqs/scalingHardware.png";
 
 <img src={BitcoinForksUrl} alt="Bitcoin forks URL" />
 
 _Diagram of Bitcoin forks & splits to June 2023. Note that Bitcoin underwent both hard & soft forks before its initial chain split to BTC/BCH. Diagram is periodically updated by [Reddit user lugaxker](https://www.reddit.com/user/lugaxker/submitted/)._
 
-If carefully managed, no. If handled irresponsibly, definitely.
+If carefully managed, no. If handled irresponsibly, absolutely yes.
 
-~~
+
+## What's the correct blocksize?
+
+Amazingly, through the BTC/BCH chain split & later the BCH/BSV chain split, Bitcoin history has provided real-world examples of three different approaches to scaling blocksize & the tradeoffs of each option.
+
+### Blocks just right - BCH
+
+Bitcoin Cash adopts a "moderate" strategy to increasing blocks. It allows gradually increasing block sizes over time to accomodate improving technology. This process is managed by [the ABLA algorithm](/faqs/BCH/what-is-the-maximum-bch-blocksize) to ensure growth remains responsive to real demand & within the bounds of improving technology. This gives infrastructure operators (miners, full nodes, wallet services, block explorers, exchanges & other businesses) clear guidance to plan their operation resources for the present & foreseeable future. In addition, ABLA replaces the need for the BCH community to periodically discuss, debate & co-ordinate blocksize increases.
+
+### Blocks too small - BTC
+
+<img src={ScalingHardwareUrl} alt="Scaling hardware" />
+
+
+Maintaing a static blocksize ~~.
+
+Some BTC supporters may believe that the BTC blocksize is not fixed & "can be easily raised when necessary", but [nothing could be further from the truth](/faqs/BCH-vs-BTC/what-if-btc-raises-block-size). Until demonstrated by an unlikely & surprising turn of history, the status quo will constantly entrench BTC as a 1MB chain.
+
+
+### Blocks too large - BSV
+
+
+
 
 See also: [Why is there so much propaganda in BTC?](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc)
