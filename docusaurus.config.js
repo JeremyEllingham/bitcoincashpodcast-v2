@@ -174,8 +174,16 @@ module.exports = {
               href: "https://cointr.ee/bitcoincashpodcast",
             },
             {
-              label: "Instagram",
+              label: "Instagram (podcast)",
+              href: "https://www.instagram.com/thebchpodcast/",
+            },
+            {
+              label: "Instagram (personal)",
               href: "https://www.instagram.com/thebitcoincashpodcast/",
+            },
+            {
+              label: "TikTok",
+              href: "https://www.tiktok.com/@thebchpodcast",
             },
             {
               label: "Twitch.tv",
