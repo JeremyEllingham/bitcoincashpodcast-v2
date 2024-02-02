@@ -5,7 +5,7 @@ title: What's wrong with Bitcoin BTC?
 ---
 
 import boatHole from "@site/static/img/faqs/boatHole.png";
-import ReactPlayer from "react-player/youtube";
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
 
 <img src={boatHole} alt="BTC boat response meme" />
 
@@ -30,14 +30,7 @@ The Bitcoin Cash community chose to [increase the blocksize limit and retain the
 
 Note that the Bitcoin BTC community [cannot easily reverse course](/faqs/BCH-vs-BTC/what-if-btc-raises-block-size), precisely because it is decentralised and because anyone who prefers the BCH approach is already in the BCH community.
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 20,
-  }}
-  url={"https://www.youtube.com/watch?v=0BZoKH-hX_o"}
-  target="_blank"
-/>
+<CustomReactPlayer url={"https://www.youtube.com/watch?v=0BZoKH-hX_o"} />
 
 See also: [If BCH improved on BTC by raising the 1MB block size limit, what if BTC does the same?](/faqs/BCH-vs-BTC/what-if-btc-raises-block-size)
 
