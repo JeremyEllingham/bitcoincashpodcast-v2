@@ -5,7 +5,6 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
-import ReactPlayer from "react-player/youtube";
 import CustomReactPlayer from "../components/CustomReactPlayer";
 
 function HomepageHeader() {
@@ -81,7 +80,7 @@ function HomepageHeader4() {
     >
       <div className="container">
         <h1 className="hero__title" style={{ color: "#84cb55" }}>
-          Putting the currency back in cryptocurrency
+          Putting the currency back in crypto
         </h1>
         <p className="hero__subtitle" style={{ color: "black" }}>
           A proactive peer-to-peer economy
