@@ -9,22 +9,10 @@ import firstSeenWhitepaper from "@site/static/img/faqs/firstSeenWhitepaper.jpg";
 
 Bitcoin Cash transactions (between non-custodial wallets, NOT to banking solutions like cryptocurrency exchanges) are, **in the vast majority of payment scenarios, effectively instant**. Take a look at these examples of demo and real world BCH usage, then read below for the finer details.
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 40,
-    marginLeft: "auto",
-    marginRight: "auto",
-  }}
+<CustomReactPlayer
   url={"https://www.youtube.com/watch?v=Ml4fMFyY0iA"} />
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 40,
-    marginLeft: "auto",
-    marginRight: "auto",
-  }}
+<CustomReactPlayer
   url={"https://youtu.be/LAywZg1TV5U?t=38"} />
 
 Bitcoin Cash network nodes (and therefore miners) follow a "first seen relay policy". This means that a submitted transaction will pre-empt conflicting transactions from being accepted into the mempool of nodes. Network propagation time is within moments (similar to a WhatsApp or Telegram message) and so the only way to create a double spend (without the cooperation of miners, see below) is to send a "fraud" transaction and a "takeback" transaction within milliseconds of each other and hope that the latter reaches more of the network purely by chance and despite its delay. This is not trivial to even attempt, requiring technical knowledge, planning and co-ordinated execution. You will not see someone able to try this kind of fraud while purchasing a slice of pizza in front of even the most inattentive retail assistant!
@@ -43,13 +31,7 @@ Large Bitcoin miners operate multi-million dollar industrial scale companies, an
 
 ## Cryptocurrency Exchanges
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 40,
-    marginLeft: "auto",
-    marginRight: "auto",
-  }}
+<CustomReactPlayer
   url={"https://youtu.be/EP5wCmOrVR4?t=5273"} />
 
 The major exception to 0-confirmation transactions is cryptocurrency exchanges. Cryptocurrency exchanges are often very conservative with crediting user deposits in BCH, potentially requiring 6 or even more confirmations to consider a transaction reliably accepted by the network. Unlike most other BCH economy participants, they are uniquely at high risk of double-spend fraud (user deposits BCH, swaps on the exchange for another cryptocurrency, withdraws that other cryptocurrency, then colludes with a miner to reverse the initial deposit and keep their original BCH as well). They also handle large time-sensitive payments regularly, so unlike most other parts of the economy they could be targeted for fraud by colluding with miners.
