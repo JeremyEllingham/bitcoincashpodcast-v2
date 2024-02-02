@@ -44,7 +44,7 @@ Other cryptocurrencies may have different considerations regarding their specifi
 
 No.
 
-Faster blocks only allow more throughput if blocksize is artificially capped. For instance, Litecoin (2.5 min blocks) has higher transaction throughput per minute than BTC (10 minute blocks), because both are capped by their 1 MB blocksize limit. Thus Litecoin can process 4x as many transactions (4 MB / 10 mins) as BTC (1MB / 10 mins) in an average 10 minute window.
+Faster blocks only allow more throughput if blocksize is artificially capped. For instance, Litecoin (2.5 min blocks) has higher transaction throughput per minute than BTC (10 minute blocks), because both are capped by their 1 MB blocksize limit. Thus Litecoin can process 4x as many transactions (4 MB / 10 mins) as BTC (1MB / 10 mins) in an average 10 minute window. [Note for the pedantic: BTC does still have a 1 MB blocksize although it now calculates using up to 4MB of "block weight"].
 
 However this reasoning does not apply for Bitcoin Cash. It does not have an artificially capped blocksize, instead it has [ABLA](/faqs/BCH/what-is-the-maximum-bch-blocksize) ensuring sufficient throughput for expected demand. The entire transaction backlog (mempool) is expected to clear every single block, except in rare circumstances. If throughput is insufficient, the solution is to raise the blocksize rather than to increase the speed of blocks.
 
