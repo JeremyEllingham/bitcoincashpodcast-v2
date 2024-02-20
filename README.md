@@ -29,3 +29,9 @@ yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Extra notes
+
+/bitcoin.pdf hosted in /static for general reference.
+
+/sunglasses.jpg link hosted in /static for Zapit ad banner reference.
