@@ -43,7 +43,7 @@ _Blocks too small centralises access to only a tiny number of users that can aff
 
 Amazingly, through the BTC/BCH chain split & later the BCH/BSV chain split, Bitcoin history has provided real-world examples of three different approaches to scaling blocksize & the tradeoffs of each option.
 
-### Blocks just right - BCH
+### Moderate blocksize increases ("just right") - BCH
 
 Bitcoin Cash adopts a "moderate" strategy to increasing blocks. It allows gradually increasing block sizes over time to accomodate improving technology. This process is managed by [the ABLA algorithm](/faqs/BCH/what-is-the-maximum-bch-blocksize) to ensure growth remains responsive to real demand & within the bounds of improving technology. This gives infrastructure operators (miners, full nodes, wallet services, block explorers, exchanges & other businesses) clear guidance to plan their operation resources for the present & foreseeable future. In addition, ABLA replaces the need for the BCH community to periodically discuss, debate & co-ordinate blocksize increases.
 
@@ -51,7 +51,7 @@ The BCH community believes in scaling commensurate to improving hardware capabil
 
 BCH does not have the largest number of nodes though. As of February 2024, there are around 750 BCH nodes. This is NOT due to the blocksize directly (BCH traffic is still cumulatively lower than BTC traffic) but instead due to the small size of the community.
 
-### Blocks too small - BTC
+### Low, static blocksize ("too small") - BTC
 
 <img src={ScalingHardwareUrl} alt="Scaling hardware" />
 
@@ -65,15 +65,16 @@ Far from ["driving creative solutions"](/faqs/BCH-vs-BTC/is-a-1MB-limit-needed-t
 
 Some BTC supporters may believe that the BTC blocksize is not fixed & "can be easily raised when necessary", but [nothing could be further from the truth](/faqs/BCH-vs-BTC/what-if-btc-raises-block-size). Until demonstrated by an unlikely & surprising turn of history, the status quo will constantly entrench BTC as a 1MB chain.
 
-### Blocks too large - BSV
+### Unlimited blocksize ("too large") - BSV
 
-In 2017, opinions of "big blockers" were split to such an extent that the Bitcoin Cash project split into two further competing chains - Bitcoin Cash (BCH) & Bitcoin Satoshi's Vision (BSV). The BSV side believed not in just bigger blocks - but in the biggest blocks possible, even unlimited blocks.
+In 2017 & 2018, opinions of "big blockers" were split to such an extent that the Bitcoin Cash project split into two further competing chains - Bitcoin Cash (BCH) & Bitcoin Satoshi's Vision (BSV). The BSV side believed not in just bigger blocks - but in the biggest blocks possible, even unlimited blocks.
 
 Rather than seeing blocksize as being a careful balance between redundancy & capacity (mitigated by technological improvement) like the BCH community, they instead believed that no blocksize should be set or managed within the protocol at all. They preferred to let the "free market" shoulder the burden of deciding on appropriate blocksizes, to the extent of even celebrating network downtime or service failures as "pushing the limits" of BSV. From their point of view, any node operator, miner or service that could not afford or could not feasibly maintain the technical or infrastructure costs of a limitless amount of throughput should be considered unimportant to the network.
 
-In pursuit of this objective, not only did the BSV community remove any blocksize limit, they also increased the on-chain data storage capabilities and lowered minimum network fees from fractions of a cent (in the $0.001 range of BCH) to several magnitudes cheaper that that.
+In pursuit of this objective, not only did the BSV community remove any blocksize limit, they also increased the on-chain data storage capabilities and lowered minimum network fees from fractions of a cent (in the $0.001 range of BCH) to several magnitudes cheaper that that. Traffic on the BSV network exploded, not due to an organic rise in end-consumer demand, but instead due to enormous throuphput of supposed "apps", such as one that stored weather data on the blockchain. The BSV community celebrated this as "innovation" & "proof of scalability", but critics rightly identified this as essentially automated spam. Transaction volumes climbed to hundreds of millions of transactions (gigabyte sized blocks) despite very little time for technology to improve or engineering efforts to be made in improving node software performance.
 
-These radical & unrestrained technical choices, along with a cultural emphasis on dismissing any pushback from service operators or node runners, quickly shrank their network to a point of almost complete centralisation. Exchanges delisted BSV because they could not afford to run such an expensive node for such a small community of customers (among other reasons), service operators such as block explorers did the same, home node operators gave up on trying to service such an unfeasibly large volume of traffic.
+These radical & unrestrained technical choices, along with a cultural emphasis on dismissing any pushback from service operators or node runners, quickly shrank their network to a point of almost complete centralisation. Exchanges delisted BSV because (among other reasons) they could not afford to run such demanding node infrastructure for such a small community of customers. Service operators such as block explorers did the same. Home node operators gave up on trying to service such an unfeasibly large volume of traffic.
 
+BSV is down to just a handful of nodes (less than 10 - perhaps operated in reality by just one or two entities), essentially forfeiting any claim to decentralisation & resilience. The BSV community remain unconcerned by this, but are at perpetual risk of having their entire network simply stop existing. No end users run a node & nor do most of the very few businesses in the ecosystem, so they would have no recourse in the case of a cessation of service or involuntary asset seizure. This serves as a pertinent warning to the BCH community that blocksize increases must be managed with prudence & careful analysis of the engineering & economic tradeoffs.
 
 See also: [Why is there so much propaganda in BTC?](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc)
