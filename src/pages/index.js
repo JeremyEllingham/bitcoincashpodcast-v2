@@ -108,7 +108,6 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Following Bitcoin Cash (BCH) on its rise to global reserve currency."
     >
-      <AnnouncementBar />
       <HomepageHeader />
       <HomepageHeader2 />
       <HomepageHeader3 />

@@ -1,5 +1,5 @@
 :root {
-  --docusaurus-announcement-bar-height: auto;
+  --docusaurus-announcement-bar-height: 60;
 }
 
 .announcementBar {
@@ -20,9 +20,9 @@
   border-bottom: 1px solid var(--ifm-color-emphasis-100);
 }
 
-html[data-announcement-bar-initially-dismissed='true'] .announcementBar {
+/* html[data-announcement-bar-initially-dismissed='true'] .announcementBar {
   display: none;
-}
+} */
 
 .announcementBarPlaceholder {
   flex: 0 0 10px;
@@ -45,11 +45,11 @@ html[data-announcement-bar-initially-dismissed='true'] .announcementBar {
 
 @media (min-width: 997px) {
   :root {
-    --docusaurus-announcement-bar-height: 30px;
+    --docusaurus-announcement-bar-height: 60px;
   }
 
   .announcementBarPlaceholder,
   .announcementBarClose {
-    flex-basis: 50px;
+    flex-basis: 60px;
   }
 }
