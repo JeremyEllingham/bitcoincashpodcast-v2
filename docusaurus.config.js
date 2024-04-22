@@ -17,6 +17,13 @@ module.exports = {
   organizationName: "The Bitcoin Cash Podcast", // Usually your GitHub org/user name.
   projectName: "bitcoincashpodcast-v2", // Usually your repo name.
   themeConfig: {
+    announcementBar: {
+      id: 'social_media_announcement',
+      content: ' ',
+      backgroundColor: '#fafbfc',
+      textColor: '#091E42',
+      isCloseable: false,
+    },
     navbar: {
       title: "The Bitcoin Cash Podcast",
       logo: {
@@ -235,14 +242,14 @@ module.exports = {
         },
         gtag: {
           // You can also use your "G-" Measurement ID here.
-          // trackingID: "x", // For local dev purposes
-          trackingID: process.env.GOOGLE_ANALYTICS_ID,
+          trackingID: "x", // For local dev purposes
+          // trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
         },
         googleAnalytics: {
-          // trackingID: "x", // For local dev purposes
-          trackingID: process.env.GOOGLE_ANALYTICS_ID,
+          trackingID: "x", // For local dev purposes
+          // trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
         },

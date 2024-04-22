@@ -6,6 +6,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 import CustomReactPlayer from "../components/CustomReactPlayer";
+import AnnouncementBar from "../theme/AnnouncementBar"
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -107,6 +108,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Following Bitcoin Cash (BCH) on its rise to global reserve currency."
     >
+      <AnnouncementBar />
       <HomepageHeader />
       <HomepageHeader2 />
       <HomepageHeader3 />
