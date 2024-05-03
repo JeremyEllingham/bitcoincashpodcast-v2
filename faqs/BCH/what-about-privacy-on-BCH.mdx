@@ -6,12 +6,17 @@ title: What about privacy on Bitcoin Cash?
 
 Privacy is a critical aspect of money, as it preserves fungibility between tokens and makes it more attractive to end-consumers, and is therefore a high priority of the Bitcoin Cash community in its quest to [become the global reserve currency](/faqs/Global-Reserve-Currency/what-do-you-mean-global-reserve-currency). However, the BCH blockchain is completely accessible to anyone, with no privacy solutions built directly into the chain. This is a point most frequently highlighted by [competing Monero advocates](/faqs/Cryptocurrency/what-about-monero-xmr).
 
+:::tip
+
+Instead of providing protocol level privacy itself, the BCH community is working on "atomic swap" technology to allow trustless exchange between BCH & XMR or other privacy focussed chains. In this way, the BCH community has easy access to those properties without introducing all of the tradeoffs directly into its own ecosystem.
+
+:::
+
 The BCH community attacks privacy in the following ways:
 
 - **Focus on peer-to-peer adoption**: The best form of privacy is being able to hide in a crowd. The BCH community is heavily focussed on [spreading to as many people as possible](/faqs/Global-Reserve-Currency/what-do-you-mean-global-reserve-currency) while creating real commerce links and retail merchant adoption. This reduces the need to interact with centralised exchanges or other privacy-reducing identity checkpoints. The more BCH is earnt directly peer-to-peer, and the more places it can be spent peer-to-peer, the more private the entire chain becomes and the more difficult chain analysis is. Note that creating this adoption is a community mentality more than a technical issue, and that building more privacy into the protocol itself may make this effort more difficult by raising the technical and user experience barriers to providing and supporting simple end user tools [at global scale](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency).
 - **Low-fee UTXO design**: As a UTXO chain, BCH is more private by default than account model chains like [Ethereum](/faqs/Cryptocurrency/what-about-ethereum-eth). Because of its committment to [low fees](/faqs/BCH/will-bch-fees-rise), it is trivial for BCH users to use fresh addresses & [spread out their wallets](/faqs/BCH-vs-BTC/btc-savings-bch-checking) - helping to protect their privacy as well as other BCH users. This is not true on high-fee BTC, where [users prefer to consolidate their UTXOs](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc) to reduce fee burden (but sacrificing their own & other BTC users' privacy).
 - **CashFusion**: Instead of building privacy into the protocol, BCH has built it on top with a technology called CashFusion. This lets users mix their coins together in batches that obfuscates the coin history and restores privacy and fungibility if coin tracking would be an issue. It is available today with [Electron Cash wallet](https://electroncash.org/).
-- **SmartBCH**: Because of [SmartBCH](/faqs/SmartBCH/what-is-smart-bch), The Bitcoin Cash community can replicate privacy tools built for EVM compatible chains. For example [Tornado.cash](https://tornado.cash/) on Ethereum can be replicated on SmartBCH. As SmartBCH is still young these projects have not appeared yet but they should soon. In addition, the ability to trade some coins from BCH to SmartBCH and receive others when transferring back creates another form of coin delinking.
 
 Note that none of these three points are replicated by the Bitcoin (BTC) community, who are far less aware of the need for privacy and fungibility.
 
@@ -22,6 +27,16 @@ This strategy also accomodates the following properties:
 - **Avoids regulatory attack**: The simplicity of a transparent blockchain allows BCH (and many other cryptocurrencies) to avoid intense attack from regulators. Coins with protocol-level privacy strategies like Monero, ZCash and others frequently suffer from being delisted from exchanges, banned for usage by governments or other issues that slow down their ability to attract new end users.
 
 Monero or other privacy-focussed chains may compromise on any/all of those aspects in their own chain design, deficits that they tend to undervalue or overlook without appropriately considering the balance of factors needed to be the best money in the world and reach global adoption.
+
+## What about protocol level privacy?
+
+Occassionally people will be curious if BCH's pro-innovation mindset will facilitate protocol level privacy upgrades like Monero or other coins. This is unlikely, for a combination of the following reasons:
+
+- **Supply auditability**: An inflation bug may be argued as a low risk, but it can never be argued as 0 risk & this is not an element of sound money the BCH community is likely to ever tolerate compromising.
+- **Scaling**: It is critical for BCH to be able to reach global adoption (which itself creates privacy, the best privacy is being part of a large crowd) & this may not be feasible if making protocol level compromises for increased privacy.
+- **Impact on DeFi**: Privacy technologies may conflict with or cause issues in the [CashTokens](/faqs/Tech/what-is-cashtokens) ecosystem. The BCH community has chosen the substantial benefits of this economic innovation & traction over protocol level privacy implementations. Not that the two are necessarily totally exclusive, but reconciling the two is certainly no trivial task.
+- **CEX & regulatory pushback**: Going all in on the privacy front, while laudable, is likely to create a huge swath of issues with global regulators & delistings from exchanges. This is simply not a battle the BCH community can currently afford to fight alongside its many other concerns.
+- **Lack of resources**: While not an independently strong argument, much aside from anything else the BCH community has to prioritise where it spends its limited pool of resources & developer talent. Protocol level privacy is just not high on that list.
 
 See also: [What about Monero (XMR)?](/faqs/Cryptocurrency/what-about-monero-xmr)
 
