@@ -12,9 +12,9 @@ import CustomReactPlayer from "../../src/components/CustomReactPlayer";
 
 _ABLA explained in just 3 minutes._
 
-The current Bitcoin Cash maximum blocksize is 32 MB. Some miners have locally set "soft limits" at lower amounts (typically 8 MB) due to the current infrequency of greater traffic.
+Bitcoin Cash does not have a fixed maximum blocksize, instead it has a floating algorithmic limit. Some miners have locally set "soft limits" at lower amounts (typically 8 MB) due to the current infrequency of greater traffic - each miner has full control of the size of blocks they mine & can adapt this themselves at any time. There is also a 2GB blocks "soft limit" due to [restrictions on 32 bit architecture](https://gitlab.com/0353F40E/ebaa#32-bit-implementation-limitation).
 
-In May 2024, the Bitcoin Cash network will upgrade to "ABLA" (ab-la, like "habla" in Spanish but without the 'h', rhymes with "ABBA"), the [Adaptive Blocksize Limit Algorithm](https://gitlab.com/0353F40E/ebaa). Starting from a guaranteed minimum of 32 MBs & with no (eventual) upper bound, it will increase or decrease blocksizes according to real network traffic (observed blocksizes). The maximum continual increase is 2x per year if all blocks are 100% full, but under realistic conditions this is unlikely. However ABLA also has a bonus amount of temporary "surge capacity" which allows blocks to increase up to 4x / year IF following a lengthy period without increases, to accomodate unexpected viral adoption.
+In May 2024, the Bitcoin Cash network upgraded to "ABLA" (ab-la, like "habla" in Spanish but without the 'h', rhymes with "ABBA"), the [Adaptive Blocksize Limit Algorithm](https://gitlab.com/0353F40E/ebaa). Starting from a guaranteed minimum of 32 MBs & with no (eventual) upper bound, it increases or decreases blocksizes according to real network traffic (observed blocksizes). The maximum continual increase is 2x per year if all blocks are 100% full, but under realistic conditions this is unlikely. However ABLA also has a bonus amount of temporary "surge capacity" which allows blocks to increase up to 4x / year IF following a lengthy period without increases, to accomodate unexpected viral adoption.
 
 <img src={ABLAexampleURL} alt="ABLA Example url" />
 
@@ -87,7 +87,7 @@ Stability & predictability is an important engineering concern. However, no larg
 
 _Isn't there potential for the Bitcoin Cash community to hit the same roadblock as the pre-split Bitcoin and refuse to scale the blocks with growing demand as [happened with BTC](/start#episode-8-of-10-bitcoin-cash)? Those who don't learn the mistakes of history are doomed to repeat them._
 
-While having no limit is foolish, the BCH community does recognise that the coordination cost of raising the limit each time is substantial & potential for splitting the community over a divisive issue does exist. To address these concerns, an automatically adapting blocksize will be introduced in May 2024.
+While having no limit is foolish, the BCH community does recognise that the coordination cost of raising the limit each time is substantial & potential for splitting the community over a divisive issue does exist. To address these concerns, an automatically adapting blocksize was introduced in May 2024.
 
 See also: [Can Bitcoin Cash scale technically to global reserve currency?](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency)
 
