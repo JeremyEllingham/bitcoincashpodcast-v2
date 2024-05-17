@@ -12,7 +12,7 @@ import CustomReactPlayer from "../../src/components/CustomReactPlayer";
 
 _ABLA explained in just 3 minutes._
 
-Bitcoin Cash does not have a fixed maximum blocksize, instead it has a floating algorithmic limit. Some miners have locally set "soft limits" at lower amounts (typically 8 MB) due to the current infrequency of greater traffic - each miner has full control of the size of blocks they mine & can adapt this themselves at any time. There is also a 2GB blocks "soft limit" due to [restrictions on 32 bit architecture](https://gitlab.com/0353F40E/ebaa#32-bit-implementation-limitation).
+Bitcoin Cash does not have a fixed maximum blocksize, instead it has a floating algorithmic limit. You can see the current ABLA-set blocksize [on Coin.dance](https://cash.coin.dance/blocks/maxblocksize). Some miners have locally set "soft limits" at lower amounts (typically 8 MB) due to the current infrequency of greater traffic - each miner has full control of the size of blocks they mine & can adapt this themselves at any time. There is also a 2GB blocks "soft limit" due to [restrictions on 32 bit architecture](https://gitlab.com/0353F40E/ebaa#32-bit-implementation-limitation).
 
 In May 2024, the Bitcoin Cash network upgraded to "ABLA" (ab-la, like "habla" in Spanish but without the 'h', rhymes with "ABBA"), the [Adaptive Blocksize Limit Algorithm](https://gitlab.com/0353F40E/ebaa). Starting from a guaranteed minimum of 32 MBs & with no (eventual) upper bound, it increases or decreases blocksizes according to real network traffic (observed blocksizes). The maximum continual increase is 2x per year if all blocks are 100% full, but under realistic conditions this is unlikely. However ABLA also has a bonus amount of temporary "surge capacity" which allows blocks to increase up to 4x / year IF following a lengthy period without increases, to accomodate unexpected viral adoption.
 
@@ -23,8 +23,6 @@ _One example scenario showing ABLA adjustments in response to varying blocksizes
 The algorithm intelligently adapts to sudden, large demand spikes by allowing rapid initial increases which it slows if upward momentum is too fast. It also decreases blocksizes if capacity is excessive for long periods of time, to reduce burden on infrastructure providers. Once implemented, the Bitcoin Cash community can spend its energy attacking other problems than debating a perfect size & coordinating blocksize changes, hopefully in perpetuity.
 
 This algorithm is a part of Bitcoin Cash's [technical plan for scaling to global reserve currency](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency) & ensures [fees will remain low](/faqs/BCH/will-bch-fees-rise).
-
-You can see the current ABLA-set blocksize [on Coin.dance](https://cash.coin.dance/blocks/maxblocksize).
 
 For further discussion, read [this Reddit thread](https://old.reddit.com/r/btc/comments/1c36fiv/help_me_learn_about_the_dynamic_blocksize/) featuring prominent discussion & debate with the CHIP author `bitcoincashautist`.
 
