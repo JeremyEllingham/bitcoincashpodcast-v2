@@ -8,6 +8,7 @@ import spotifyLogo from "@site/static/img/socialMedia/spotify.png";
 import twitchLogo from "@site/static/img/socialMedia/twitch.png";
 import tiktokLogo from "@site/static/img/socialMedia/tiktok.png";
 import applePodcastsLogo from "@site/static/img/socialMedia/applePodcasts.png";
+import googlePodcastsLogo from "@site/static/img/socialMedia/googlePodcasts.png";
 import rssLogo from "@site/static/img/socialMedia/rss.png";
 
 export default function AnnouncementBarContent() {
@@ -60,6 +61,11 @@ export default function AnnouncementBarContent() {
       <span style={spanStyle}>
         <a href="https://podcasts.apple.com/gb/podcast/the-bitcoin-cash-podcast/id1555355070" target="_blank">
           <img src={applePodcastsLogo} height={40} width={40} alt="Apple Podcasts link" />
+        </a>
+      </span>
+      <span style={spanStyle}>
+        <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9tZWRpYS5yc3MuY29tL2JpdGNvaW5jYXNocG9kY2FzdC9mZWVkLnhtbA" target="_blank">
+          <img src={googlePodcastsLogo} height={40} width={40} alt="Google Podcasts link" />
         </a>
       </span>
       <span style={spanStyle}>
