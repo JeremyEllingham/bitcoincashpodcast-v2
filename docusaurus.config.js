@@ -31,7 +31,7 @@ module.exports = {
         src: "img/bch.png",
       },
       items: [
-        { to: "https://flipstarter.bitcoincashpodcast.com", label: "Flipstarter", position: "left" },
+        // { to: "https://flipstarter.bitcoincashpodcast.com", label: "Flipstarter", position: "left" },
         { to: "/start", label: "Start Here!", position: "left" },
         { to: "/about", label: "About", position: "left" },
         { to: "/faqs", label: "FAQs", position: "left" },
