@@ -14,7 +14,7 @@ import BCHFHeart from "@site/static/img/faqs/BCHFHeart.png";
 
 _Endorsed with love._
 
-The Bitcoin Cash Podcast is excited to publically endorse the [Bitcoin Cash Foundation](https://bitcoincashfoundation.org/) & be listed on its Endorsements page. BCH is a resilient & growing project, but its success rests only on the proactive contributions & collaboration of its community. The BCHF stands out notably in this regard & it's something the entire BCH community should take seriously in recognising & rewarding. Bringing about a voluntary, decentralised world is no small task & it's one which the BCHF has undertaken with passion & dedication - leading by example in its committment & contributions.
+The Bitcoin Cash Podcast is excited to publically endorse the [Bitcoin Cash Foundation](https://bitcoincashfoundation.org/) & be listed on its Endorsements page. BCH is a resilient & growing project, but its success rests only on [the proactive contributions & collaboration of its community](/faqs/BCH/how-can-i-contribute-to-bitcoin-cash). The BCHF stands out notably in this regard & it's something the entire BCH community should take seriously in recognising & rewarding. Bringing about a voluntary, decentralised world is no small task & it's one which the BCHF has undertaken with passion & dedication - leading by example in its committment & contributions.
 
 The Bitcoin Cash Podcast supports the Bitcoin Cash Foundation in communication efforts related to BCH ecosystem news and basic outreach. Furthermore, we support the Bitcoin Cash Foundation’s efforts to ensure Bitcoin Cash is represented in a manner consistent with ecosystem standards.
 
@@ -31,3 +31,5 @@ Jeremy
 [FAQ on Bitcoin Cash Foundation](/faqs/Projects/what-is-the-BCH-foundation)
 
 [FAQ on Bitcoin Cash governance](/faqs/Decentralisation/how-does-BCH-governance-work)
+
+[FAQ on Contributing in BCH](/faqs/BCH/how-can-i-contribute-to-bitcoin-cash)
