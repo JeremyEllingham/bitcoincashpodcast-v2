@@ -31,7 +31,7 @@ module.exports = {
         src: "img/bch.png",
       },
       items: [
-        { to: "https://bchpodcastflipstarter.cash/en", label: "Flipstarter", position: "left" },
+        { to: "https://fundme.cash/campaign/7", label: "FundMe!", position: "left" },
         { to: "/start", label: "Start Here!", position: "left" },
         { to: "/about", label: "About", position: "left" },
         { to: "/faqs", label: "FAQs", position: "left" },
