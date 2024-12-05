@@ -2,7 +2,7 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 require("dotenv").config();
 
-const bchAddress = "qre0gmqljzvdraaj0qqt59qj3mg5lfnf95sj5azt9d";
+const bchAddress = "qr64nrjy93d867h20jw0yygp00k8gylf05hp0vuhlx";
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -17,6 +17,13 @@ module.exports = {
   organizationName: "The Bitcoin Cash Podcast", // Usually your GitHub org/user name.
   projectName: "bitcoincashpodcast-v2", // Usually your repo name.
   themeConfig: {
+    announcementBar: {
+      id: 'social_media_announcement',
+      content: ' ',
+      backgroundColor: '#fafbfc',
+      textColor: '#091E42',
+      isCloseable: false,
+    },
     navbar: {
       title: "The Bitcoin Cash Podcast",
       logo: {
@@ -24,9 +31,12 @@ module.exports = {
         src: "img/bch.png",
       },
       items: [
+        { to: "https://fundme.cash/campaign/7", label: "FundMe!", position: "left" },
         { to: "/start", label: "Start Here!", position: "left" },
         { to: "/about", label: "About", position: "left" },
-        { to: "/roadmap", label: "Roadmap", position: "left" },
+        { to: "/faqs", label: "FAQs", position: "left" },
+        { to: "/recommended", label: "Recommended", position: "left" },
+        { to: "/code", label: "Code", position: "left" },
         {
           type: "doc",
           docId: "welcome",
@@ -34,11 +44,7 @@ module.exports = {
           label: "Episodes",
         },
         { to: "/music", label: "Music", position: "left" },
-        { to: "/faqs", label: "FAQs", position: "left" },
-        { to: "/stats", label: "Stats", position: "left" },
-        { to: "/code", label: "Code", position: "left" },
-        { to: "/blog", label: "Blog", position: "left" },
-        { to: "/recommended", label: "Recommended", position: "left" },
+        { to: "/more", label: "More", position: "left" },
       ],
     },
     footer: {
@@ -57,11 +63,11 @@ module.exports = {
             },
             {
               label: "Episodes",
-              to: "/docs/welcome",
+              to: "/episodes/welcome",
             },
             {
-              label: "Music",
-              to: "/music",
+              label: "More",
+              to: "/more",
             },
             {
               label: "FAQs",
@@ -139,7 +145,7 @@ module.exports = {
           items: [
             {
               label: "CashRain",
-              href: "https://cashrain.com/BitcoinCashPodcast",
+              href: "https://cashrain.com/bitcoincashpodcast",
             },
             {
               label: "Youtube (Clips Channel)",
@@ -162,6 +168,11 @@ module.exports = {
               href: "https://t.me/thebitcoincashpodcast_discussion",
             },
             {
+              label: "Reddit",
+              href: "https://www.reddit.com/r/BitcoinCashPodcast/",
+            },
+
+            {
               label: "Patreon",
               href: "https://www.patreon.com/bitcoincashpodcast",
             },
@@ -170,8 +181,16 @@ module.exports = {
               href: "https://cointr.ee/bitcoincashpodcast",
             },
             {
-              label: "Instagram",
+              label: "Instagram (podcast)",
+              href: "https://www.instagram.com/thebchpodcast/",
+            },
+            {
+              label: "Instagram (personal)",
               href: "https://www.instagram.com/thebitcoincashpodcast/",
+            },
+            {
+              label: "TikTok",
+              href: "https://www.tiktok.com/@thebchpodcast",
             },
             {
               label: "Twitch.tv",
@@ -209,6 +228,8 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          path: "episodes",
+          routeBasePath: "episodes",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/JeremyEllingham/bitcoincashpodcast-v2",
         },
@@ -221,11 +242,13 @@ module.exports = {
         },
         gtag: {
           // You can also use your "G-" Measurement ID here.
+          // trackingID: "x", // For local dev purposes
           trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
         },
         googleAnalytics: {
+          // trackingID: "x", // For local dev purposes
           trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?

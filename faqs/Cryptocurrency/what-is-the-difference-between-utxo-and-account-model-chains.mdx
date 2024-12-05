@@ -1,0 +1,94 @@
+---
+id: what-is-the-difference-between-utxo-and-account-model-chains
+sidebar_position: 3
+title: What is the difference between UTXO & account model chains?
+---
+
+import utxoExplanationUrl from "@site/static/img/faqs/utxoExplanation.png";
+
+Although presented as a homogenous list on [Coinmarketcap](https://coinmarketcap.com/) or in the ubiquitous branding of "cryptocurrencies", the broad spectrum of projects under the "cryptocurrency" banner obscures a baffling array of distinctions & subcategories. Everything from underlying technology, economic design, funding, political governance, decentralisation & many other factors differs wildly among projects in a chaotic, ever-changing mess. If it helps, consider "cryptocurrency" as a term somewhat akin to "biology", which encompasses a huge tree of differentiated matter from single-celled organisms to plants, animals & humans.
+
+Before explaining UTXO vs Account model, it is important to clarify the distinction between cryptocurrencies & networks.
+
+## Networks vs Currencies
+
+This article is dealing with cryptocurrency **networks**, not **cryptocurrencies**, although they overlap.
+
+A cryptocurrency **network** **<u>must</u>** have:
+
+-  Its own physical infrastructure:
+- - Nodes (servers) that run the network
+- - Miners or validators to append transactions to the blockchain
+- It's own social infrastructure, a community ecosystem of:
+- - Developers
+- - Infrastructure providers
+- - Wallets
+- - Discussion forums & news services 
+- - ... & so on.
+
+A **cryptocurrency** (NOT a **network**) does **<u>NOT necessarily require its own physical infrastructure</u>**, though many have it. This is because a cryptocurrency can operate without its own physical infrastructure by existing as a token that flows across one (or more) other cryptocurrency networks. In this case, the "parasite" cryptocurrency uses the "host" cryptocurrency network to provide the physical servers & blockchain upon which its tokens are transacted. The term "parasite" is a little unkind, as the relationship is usually symbiotic (except in extreme cases). The "parasite" currency brings transaction demand, attention/marketing & ecosystem activity to the host network in exchange for piggybacking on its physical (& sometimes social) infrastructure.
+
+For example: Bitcoin Cash is both a cryptocurrency AND a cryptocurrency network. The same for [Bitcoin Core](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc), [Ethereum](/faqs/Cryptocurrency/what-about-ethereum-eth) & [Dogecoin](/faqs/Cryptocurrency/what-about-dogecoin-doge).
+
+However: [Tether](/faqs/Scams/tether) is a cryptocurrency that does NOT have its own cryptocurrency network. There are no "Tether nodes" or "Tether miners". Tethers are tokens traded across a variety of physical cryptocurrency networks, including [Ethereum](/faqs/Cryptocurrency/what-about-ethereum-eth), Binance Smart Chain & others. This is also true of USDC, Shiba Inu (SHIB) & many others.
+
+Note also that [chain-splits](/faqs/Decentralisation/what-is-a-soft-hard-fork#chain-split) are a special case of a cryptocurrency network dividing into two cryptocurrencies each with its own separate network, not just one cryptocurrency dividing into two cryptocurrencies on the same network. This division of physical infrastructure (& surrounding community) is both incredibly traumatic & rare. Tokens on the original host network may also be duplicated as a result.
+
+Yes, it's quite confusing! But the key point is that UTXO vs Account model chains is relevant only to cryptocurrency networks, that is physical networks across which cryptocurrencies are transacted.
+
+## UTXO vs Account model
+
+Roughly speaking, cryptocurrency networks (NOT cryptocurrencies) can be divided at a technical level into three buckets: 
+
+- `UTXO model chains`, 
+- `Account model chains`
+- `Other chains`
+
+Note that this is an oversimplification, but serves as a good starting point.
+
+### UTXO model
+
+UTXO stands for "Unspent Transaction Output". This is the "classic" cryptocurrency design, pioneered by Satoshi Nakamoto in the Bitcoin whitepaper. The "total balance" of a Bitcoin user's wallet is merely a convenient total of the individual "cash bills" (unspent transactions) held within that wallet. Transactions occur atomically & operate only with "local state", that is the coins involved in any given transaction cannot impact the coins spent in any other transaction (unless it's a parent, child, or double-spend of the relevant transaction).
+
+<img src={utxoExplanationUrl} alt="Calin explains UTXOs." />
+
+_Calin Culianu [explains the UTXO model](https://youtu.be/n5LRoFCNdA0?t=21555) while speaking at [BLISS](/faqs/Events/BLISS)._
+
+The UTXO model benefits from being extremely scaleable, security-friendly & somewhat privacy-preserving (explained further below) but it suffers from being somewhat unintuitive & complex for developers to reason about.
+
+Popular UTXO model chains include Bitcoin Cash, Bitcoin Core, [Litecoin](/faqs/Cryptocurrency/what-about-litecoin-ltc), [Dogecoin](/faqs/Cryptocurrency/what-about-dogecoin-doge) & [Monero](/faqs/Cryptocurrency/what-about-monero-xmr). 
+
+UTXO model chains have the following tendencies (frequently have these attributes, although these are NOT strict requirements):
+
+- _Tend_ to be the "old school" networks launched 2016 or earlier.
+- _Tend_ to be Proof of Work instead of Proof of Stake.
+
+This is because the [Blocksize War](/start#episode-8-of-10-bitcoin-cash) drove momentum & innovation away from Bitcoin into Ethereum & thus account model chains. Subsequent to that, Proof of Work largely fell out of favour as they became increasingly difficult to securely launch in an increasingly competitive cryptocurrency market & environmental campaigning against cryptocurrencies became temporarily prominent around 2019 - 2022 (although that was [largely misplaced](/faqs/Roadblocks/what-about-the-environment)).
+
+There are also variations within the UTXO category. [Monero](/faqs/Cryptocurrency/what-about-monero-xmr) is a UTXO chain but has protocol-level privacy adapations which make it noticeably distinct from similar chains like BCH or LTC. [Cardano](/faqs/Cryptocurrency/what-about-cardano-ada) has a modified UTXO variation they call the "eUTXO" (extended UTXO) model intended to increase the usability for smart contracts.
+
+### Account model
+
+Account model chains arose with [Ethereum](/faqs/Cryptocurrency/what-about-ethereum-eth), marking the first sigificant & substantially successful deviation from the UTXO model of Bitcoin & imitators. Instead of transacting coins as separate "cash bills", coins are instead stored in "accounts", in the same way a bank ledger is one continuous history of transactions. This is very easy to conceptualise but causes a technical problem, as transactions in one account can potentially impact or be relevant to any other account on the network (technically known as "global state"). This leads to all kinds of issues such as inability to scalably process transactions in parallel (since one transaction may have flow on consequences to another, money cannot be spent from an account that has already been spent in a separate transaction), increased opportunity for MEV (e.g. users frontrunning each other's transactions) & decreased privacy when operating on a transparent public blockchain.
+
+Account model chains have inverted strengths & weaknesses from UTXO chains. They're more intuitive & simple for software developers to reason about, leading to a headstart in tooling & momentum, but they greatly sacrifice on-chain scaleability plus security & privacy (to a lesser extent) to achieve this.
+
+Popular account model chains include [Ethereum](/faqs/Cryptocurrency/what-about-ethereum-eth), Solana (SOL), Binance Smart Chain (BSC) & Avalanche (AVAX). As with UTXO chains, variations & subcategories exist beyond the scope of this article.
+
+Account model chains have the following tendencies (frequently have these attributes, although these are NOT strict requirements):
+
+- _Tend_ to be the "newer" cryptocurrency networks launched in 2017 or later
+- _Tend_ to be Proof of Stake rather than Proof of Work.
+- _Tend_ to be "EVM (Ethereum Virtual Machine) compatible". This means they are able to run the same financial contracts & tools developed on Ethereum or any other EVM-compatible chain - helping immensely to bootstrap & retain a network effect of software tooling & infrastructure.
+
+Account model chains exhibit these trends because the [Blocksize War](/start#episode-8-of-10-bitcoin-cash) drove cryptocurrency industry activity away from Bitcoin (& UTXO competitors) into Ethereum & its direct account model competitors as Ethereum failed to scale (in large part BECAUSE it's an account model chain). By that time, launching Proof of Work networks had become less technically & socially appealing. 
+
+:::tip
+This is one reason that [CashTokens](/faqs/Tech/what-is-cashtokens) is intended to be an industry-changing innovation for Bitcoin Cash, as it can potentially return the industry's interest & focus to UTXO-focussed innovation instead of the 2016 - 2024 account model trend.
+:::
+
+### Other chains
+
+The vast majority of cryptocurrency networks are either UTXO model or Account model. The advantage of differentiating from these two is fairly marginal, it's a chance to blaze a new technical path and perhaps be recognised as an industry leader. The downside is brutally severe & unavoidable - incompatibility with other cryptocurrency ecosystems. In changing from the more understood models, an upstart network consigns itself to rebuilding all of its infrastructure, software & consumer education from scratch (a very, very uphill battle). Chains that adopt the more common UTXO or Account models do also have an uphill battle in terms of [branding](/faqs/BCH/will-bitcoin-cash-rebrand) and [consumer adoption](/faqs/BCH/is-BCH-spreading), but they are struggling on a rising tide rather than alone in a desert.
+
+For this reason, cryptocurrency networks in the "Other" category are uncommon, but they do exist. [Nano](/faqs/Cryptocurrency/what-about-nano-xno) is one example.

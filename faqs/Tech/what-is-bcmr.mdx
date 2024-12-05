@@ -1,0 +1,29 @@
+---
+id: what-is-bcmr
+sidebar_position: 3
+title: What is BCMRs and why is it exciting?
+---
+
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+
+<CustomReactPlayer
+  url={"https://www.youtube.com/watch?v=gPOCj0KulNg"} />
+
+BCMRs (Bitcoin Cash Metadata Registries) is a technical standard to facilitate hosting, updating and providing authenticated information about Bitcoin Cash on-chain assets such as [CashTokens](/faqs/Tech/what-is-cashtokens) to Bitcoin Cash wallets, exchanges, informational websites like token marketcap aggregators, NFT marketplaces and so on.
+
+In practical terms, it supplies the metadata (such as icon, ticker symbol etc.) that users of BCH applications see when using CashTokens in BCH wallets or other BCH related apps. Unlike [Ordinals](/faqs/BCH-vs-BTC/does-bch-have-ordinals), the Bitcoin Cash blockchain itself only stores some data about CashTokens (it stores token quantities but token icons are not embedded directly in the blockchain for example). This preserves scalability of the chain (by reducing storage & bandwidth burden), but requires a separate solution for distributed / decentralised hosting of that additional information. BCMRs is that solution.
+
+End users have little need to worry about BCMRs, all the details of any well-known project being integrated into prominent registries will be handled for them by developers. BCMRs is more about technical plumbing to make the BCH apps ecosystem decentralised, secure & usable than about an exciting app or product for end users.
+
+Developers integrating CashTokens into their applications or launching their own tokens should read up on BCMRs in order to correctly associate token metadata with tokens in their application. BCMRs can be hosted on the Bitcoin Cash blockchain itself, on IPFS, from a centralised website, or provided through known ecosystem participants lending reputational credibility to their attestations. In the long run it is expected that large exchanges (Coinbase, Binance etc.), wallet providers and news aggregators (such as The Bitcoin Cash Podcast) will provide this information - possibly with an additional aggregator layer (for instance a wallet may choose to display any token information which 2 of 3 from Coinbase, Binance & The Bitcoin Cash Podcast agree is valid). Public announcements by known industry providers of their BCMR hashes, verified with cryptographic signatures, makes fraud objectively provable to disincentivise bad actors.
+
+## Information for developers
+
+<CustomReactPlayer
+  url={"https://www.youtube.com/watch?v=3Hr0_re135Q"} />
+
+For technical information, see [the original CHIP spec here](https://github.com/bitjson/chip-bcmr). See also the [Bitcoin Cash Research thread](https://bitcoincashresearch.org/t/chip-2022-10-bcmr-bitcoin-cash-metadata-registries/942).
+
+The best places to discuss BCMRs and get more information are the [same ones for discussing CashTokens](/faqs/Tech/what-is-cashtokens#how-can-i-find-out-more).
+
+See also: [What is CashTokens and why is it exciting?](/faqs/Tech/what-is-cashtokens)

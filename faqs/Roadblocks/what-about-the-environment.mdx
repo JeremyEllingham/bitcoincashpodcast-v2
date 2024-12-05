@@ -4,17 +4,15 @@ sidebar_position: 3
 title: What about the environment? Doesn't Bitcoin mining waste energy?
 ---
 
-import ReactPlayer from "react-player/youtube";
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+import usdEnergy from "@site/static/img/faqs/usdEnergy.jpg";
 import environment from "@site/static/img/faqs/environment.jpg";
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 20,
-  }}
-  url={"https://www.youtube.com/watch?v=WZOlu__ZmrY"}
-  target="_blank"
-/>
+<img src={usdEnergy} alt="USD uses a lot of energy" />
+
+_Many people take the energy consumption of their existing medium of exchange for granted. [Credit](https://twitter.com/NHpilled/status/1739894923103473813)_
+
+<CustomReactPlayer url={"https://www.youtube.com/watch?v=WZOlu__ZmrY"} />
 
 Bitcoin (and all cryptocurrency mining) uses a lot of energy. A common concern is that this will cause a lot of environmental damage by "wasted" energy.
 

@@ -1,0 +1,98 @@
+---
+id: what-is-the-maximum-bch-blocksize
+sidebar_position: 11
+title: What is the maximum Bitcoin Cash blocksize? What is ABLA?
+---
+
+import jessicaAblaUrl from "@site/static/img/faqs/jessicaABLA.jpg";
+import ABLAexampleURL from "@site/static/img/faqs/ABLAexample.png";
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+
+<CustomReactPlayer url={"https://www.youtube.com/watch?v=YkkzIjZQNH0"} />
+
+_ABLA explained in just 3 minutes._
+
+Bitcoin Cash does not have a fixed maximum blocksize, instead it has a floating algorithmic limit.
+
+In May 2024, the Bitcoin Cash network upgraded to "ABLA" (ab-la, like "habla" in Spanish but without the 'h', rhymes with ["ABBA"](https://www.youtube.com/watch?v=xFrGuyw1V8s)), the [Adaptive Blocksize Limit Algorithm](https://gitlab.com/0353F40E/ebaa). Starting from a guaranteed minimum of 32 MBs & with no (eventual) upper bound, it increases or decreases the blocksize limit according to real network traffic (observed blocksizes). The maximum continual increase is 2x per year if all blocks are 100% full, but under realistic conditions this is unlikely. However ABLA also has a bonus amount of temporary "surge capacity" which allows blocks to increase up to 4x / year IF following a lengthy period without increases, to accomodate unexpected viral adoption.
+
+You can see the current ABLA-set blocksize [on Coin.dance](https://cash.coin.dance/blocks/maxblocksize). Some miners have locally set "soft limits" at lower amounts (typically 8 MB) due to the current infrequency of greater traffic - each miner has full control of the size of blocks they mine & can adapt this themselves at any time. There is also a 2GB blocks "soft limit" due to [restrictions on 32 bit architecture](https://gitlab.com/0353F40E/ebaa#32-bit-implementation-limitation).
+
+<img src={ABLAexampleURL} alt="ABLA Example url" />
+
+_One example scenario showing ABLA adjustments in response to varying blocksizes. More scenarios & analysis can be found in [the CHIP document](https://gitlab.com/0353F40E/ebaa)._
+
+The algorithm intelligently adapts to sudden, large demand spikes by allowing rapid initial increases which it slows if upward momentum is too fast. It also decreases blocksizes if capacity is excessive for long periods of time, to reduce burden on infrastructure providers. Since its implementation, the Bitcoin Cash community has been able to spend its energy attacking other problems than debating a perfect blocksize & coordinating blocksize limit changes, hopefully in perpetuity.
+
+This algorithm is a part of Bitcoin Cash's [technical plan for scaling to global reserve currency](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency) & ensures [fees will remain low](/faqs/BCH/will-bch-fees-rise).
+
+For further discussion, read [this Reddit thread](https://old.reddit.com/r/btc/comments/1c36fiv/help_me_learn_about_the_dynamic_blocksize/) featuring prominent discussion & debate with the CHIP author `bitcoincashautist`.
+
+## History
+
+After [splitting with Bitcoin Core in 2017](/start#episode-8-of-10-bitcoin-cash), the Bitcoin Cash community initially raised the blocksize limit to 8 MB. This was increased again in 2018 to a 32 MB limit.
+
+Despite the success of those increases, the BCH community recognised that co-ordinating these upgrades required a substantial amount of communication & resources which could be instead spent on other improvements. Furthermore, a repeat of The Blocksize War was still possible, where a bad-actor and/or organic disagreement stalled the project through endless arguing over the limit.
+
+To fix this problem ahead of time, the Bitcoin Cash community decided to move to an algorithmic blocksize limit that increases or decreases the blocksize limit in response to real demand on the network.
+
+The algorithm (or limit) can still be adjusted, adapted or removed in future if necessary. However it has been carefully designed & tested to minimise the chances this is an immediate or eventual concern. If a change is required, the burden will be on the proposing party to make a strong case for that change while the algorithm continues to create necessary room in blocks, rather than for status-quo inertia to benefit either an insufficient static limit or reckless unlimited increases.
+
+### Jessica
+
+<img src={jessicaAblaUrl} alt="Jessica Abla meme" />
+
+_The name's Jessica. Jessica ABLA. [Credit](https://twitter.com/Almaas_Dast/status/1728764641566953475)_
+
+The BCH community began to joke about "ABLA" being a misspelling of "Jessica Alba" - giving rise to the adaptive limit itself being called the evocative and catchy name of Jessica too. Incredibly, Jessica Alba's husband's name is Cash (seriously)! Some things are meant to be. This also led to the NFT collection of Jessicas for [BLISS](/faqs/Events/what-is-BLISS).
+
+## Importance of a limit
+
+If the BCH scaling plan is to continue growing blocksizes as large as needed, why have a limit at all?
+
+Although it is important for blockchain capacity to stay ahead of demand, having an upper bound for the current blocksize is critical. Without it, network infrastructure operators (miners, node-runners, wallet operators, block explorers & other services) are unable to perform proper capacity planning. Instead, they would be forced to operate completely blind as to what network throughput is possible - leading to network breakdown & coordination problems or technical failures.
+
+The blocksize algorithm is designed to increase capacity as required, but also limit increases to an amount justified by real demand & [ongoing improvements in available hardware](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency#scaling-pillar-2-hardware-innovation).
+
+For an alternative perspective on the issues of having no limit, read the [Adaptive Blocksize CHIP spec section](https://gitlab.com/0353F40E/ebaa/-/tree/main#no-limit).
+
+## Arguments to remove a limit
+
+Some people, most notably advocates of Bitcoin SV (frequently former or concurrent Bitcoin Cash adopters), remain perpetually concerned over the issue of blocksize limit. Although these concerns are understandable (particularly in light of history), the arguments for removing a blocksize limit are naive and lack nuance.
+Arguments to remove a limit entirely generally fall under the following banners.
+
+### Centralised control
+
+_Having a limit at all is "proof" there is "central control" of BCH. Who decides the right limit?_
+
+Central control of Bitcoin Cash is a myth. The [CHIP process](/faqs/Decentralisation/how-does-BCH-governance-work) has been developed specifically to address previous problems of centralising influence in the community. 
+
+The Bitcoin Cash blocksize is set by an automatic algorithm in a decentralised way that contains no central point for blocksize limit to be a point of capture as happened in The Blocksize War.
+
+BSV adopters that believe in central control (which they can never clearly identify the source of) are overlooking their own rejection from the community & subsequent rejection of XEC supporters as demonstrations of the community collectively determining its own direction in an organic process.
+
+### Miner agency / free market approach 
+
+_Shouldn't miners decide for themselves what is an appropriate blocksize, surely it would be better to have no limit & allow the free market to set the appropriate size of blocks?_
+
+The limit is intended to stay well above realistic demand at all times. Miners are able to accomodate their own situation by setting soft caps on their own blocks below the limit, as many do. Although they have that option, at the same time, miners have demonstrated throughout crypto history that they are often very passive (and/or busy running the more immediate concerns of their mining operation), so wherever possible they seem to prefer that as many decisions as possible are made on their behalf by community/developers. Their lack of interest in proactively intervening on other parts of BCH / Bitcoin fork development is indicative that having to manually decide on blocksizes would be one more hassle that they'd rather not need to debate or spend time adjusting.
+
+### Demand discouraging
+
+_Restricting current capacity signals large corporations or potential demand to avoid joining the community. Companies will not even consider building applications on BCH if they can't be assured the capacity to serve their large user bases will be available for their applications._
+
+Stability & predictability is an important engineering concern. However, no large company appears in the ecosystem of any blockchain suddenly adding millions of transactions with no warning. Adoption is an ongoing, organic process. The engineers at interested companies will prudently start a new initiative small and with a testing phase and also will make themselves known to the community to discuss in cases where engineering limits are a concern to them.
+
+### Historical lessons
+
+_Isn't there potential for the Bitcoin Cash community to hit the same roadblock as the pre-split Bitcoin and refuse to scale the blocks with growing demand as [happened with BTC](/start#episode-8-of-10-bitcoin-cash)? Those who don't learn the mistakes of history are doomed to repeat them._
+
+While having no limit is foolish, the BCH community does recognise that the coordination cost of raising the limit each time is substantial & potential for splitting the community over a divisive issue does exist. To address these concerns, an automatically adapting blocksize was introduced in May 2024.
+
+## Further materials
+
+- [Zapit's ABLA explanation article](https://medium.com/the-crypto-kiosk/bitcoin-cash-upgrade-2024-what-is-abla-adaptive-blocksize-limit-algorithm-a-detailed-guide-42ac3c1d0831)
+
+See also: [Can Bitcoin Cash scale technically to global reserve currency?](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency)
+
+See also: [How does Bitcoin Cash governance / updates work?](/faqs/Decentralisation/how-does-BCH-governance-work)

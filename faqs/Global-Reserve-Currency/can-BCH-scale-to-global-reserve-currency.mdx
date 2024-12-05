@@ -1,0 +1,108 @@
+---
+id: can-BCH-technically-scale-to-global-reserve-currency
+sidebar_position: 2
+title: Can Bitcoin Cash scale technically to global reserve currency?
+---
+
+import exponentialHardware from "@site/static/img/faqs/exponentialHardware.jpg";
+import satoshiOnScaling from "@site/static/img/faqs/satoshiOnScaling.png";
+import pruning from "@site/static/img/faqs/pruning.png";
+
+Yes.
+
+Satoshi Nakamoto's design in [the Bitcoin whitepaper](/bitcoin.pdf), plus ongoing innovation in underlying computer hardware allows Bitcoin Cash to scale "Layer 1" to the entire world. [Billions of users can transact 5 times per day](/faqs/Global-Reserve-Currency/what-do-you-mean-global-reserve-currency) - on-chain & non-custodially - without unduly compromising node decentralisation. This was the [original mission & plan](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin) for Bitcoin.
+
+:::info
+
+There are a number of related issues & common points of confusion around this topic, particularly for Bitcoin Core (BTC) adopters. For those readers, in addition to reading the rest of this article, the following supplements are highly recommended:
+
+- [Doesn't Bitcoin scale in layers?](/faqs/BCH-vs-BTC/doesnt-bitcoin-scale-in-layers)
+- [What about the Lightning Network?](/faqs/BCH-vs-BTC/what-about-lightning-network)
+- [What's wrong with Bitcoin BTC?](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc)
+- [If BCH improved on BTC by raising the 1MB block size limit, what if BTC does the same?](/faqs/BCH-vs-BTC/what-if-btc-raises-block-size)
+- [Why is there so much propaganda in BTC?](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc)
+- [Why is there so much censorship in BTC?](/faqs/BCH-vs-BTC/why-is-there-so-much-censorship-in-btc)
+
+:::
+
+## Scaling pillars
+
+Bitcoin Cash's strategy for getting to billions of on-chain transactions per day rests on three major pillars. When combined, they form a plan that is realistic for processing such enormous transaction volume without unduly sacrificing node decentralisation. The feasibility of this plan was evident from Bitcoin's inception in 2008, thus the confidence of Satoshi Nakamoto that it could be achieved.
+
+The three pillars are:
+
+- Parallel throughput (software improvement)
+- Hardware innovation
+- Pruned nodes
+
+:::tip
+
+Note that BCH community resources & motivation for scaling grow proportionally (or faster) than demand. For supporting 100 MB blocks, the relevant question is not whether the BCH community of today has the capital & revenues to afford necessary equipment - but whether the thriving, exploding, rapidly price-increasing BCH community with 100MB of consistent traffic could.
+
+:::
+
+### Scaling pillar #1: Bitcoin's parallel throughput
+
+A Bitcoin transaction is an internally encapsulated logical unit. Each individual transaction can be validated & processed using only its own transaction inputs & outputs. No reference to simultaneous activity of other transactions is required. Another way of thinking about this is that Bitcoin is sharded at the level of each transaction. This gives Bitcoin the property of being [embarassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel), a computer science designation for software that is easy to spread across multiple processors.
+
+Furthermore, transactions can be chained without compromising this property. An invalid, double-spent or overlooked parent child will ripple invalidity through each of its descendants. This ties together with [Bitcoin Cash's support for instant "0-conf" transactions](/faqs/Tech/what-is-0-conf).
+
+This is NOT true for "account model" chains such as Ethereum.
+
+### Scaling pillar #2: Hardware innovation
+
+<img src={exponentialHardware} alt="Exponential hardware" />
+
+_Unlike the BTC community who are [stuck in 2009 with 1MB blocks](/faqs/BCH-vs-BTC/what-if-btc-raises-block-size), BCH benefits from the predictable & ongoing exponential rise in hardware capability._
+
+Innovation & development in hardware (bandwidth, storage, processing power, cost, etc) is exponential & has been for decades. Bitcoin was designed for this environment, and BCH of course benefits from that by [retaining the original on-chain scaling strategy](/faqs/BCH/what-is-the-maximum-bch-blocksize). In this way, the entire computer hardware industry pushes forward BCH scaling with zero effort or resources expended by the BCH community themselves. Global adoption is not going to happen overnight, so in the intervening period much of the scaling issue solves itself simply by ongoing technology improvement.
+
+<img src={satoshiOnScaling} alt="Satoshi explains hardware scaling" />
+
+_The very first question Satoshi was ever asked was about Bitcoin scaling. His answer explained this obvious point, which has been vindicated since 2009. [Source](https://satoshi.nakamotoinstitute.org/emails/cryptography/2/)_
+
+Even consumer grade hardware is very, very capable these days. The average video game enthusiast or computer afficionado has access to very powerful machines without prohibitive costs. The Bitcoin Cash community has already tested [256 MB blocks on a Raspberry Pi](https://read.cash/@mtrycz/how-my-rpi4-handles-scalenets-256mb-blocks-e356213b) & even up to [1 GB blocks](https://read.cash/@mtrycz/how-my-rpi4-handles-mining-1gb-blocks-e5d09d83).
+
+:::tip
+
+Improvements in hardware (Scaling Pillar 2) multiply with improvements in software (Scaling Pillar 1). 10x more powerful hardware + 10x more efficient software = nearly 100x more throughput capacity on BCH.
+
+Scaling to billions of users becomes far more feasible in this context.
+
+:::
+
+### Scaling pillar #3: Pruned Nodes
+
+Critics of on-chain scaling like to point to the perpetually increasing storage requirements of archiving an entire copy of the blockchain, believing with big blocks it will soon be such a burden to store transaction information that only the world's largest corporations or governments will be able to afford the cost. This displays a fundamental lack of understanding of Bitcoin's design. It is **not essential to store all transaction data forever**.
+
+The relevant information for a blockchain is the UTXO (Unspent Transaction Output) set. Even if no other historical data is available, the fundamental properties of Bitcoin - such as the 21 million coin supply limit, ability to validate new transations or process smart contracts - is preserved within only the UTXO data. While the UTXO set size does grow over time, as coins distribute to more holders over more outputs, it grows far more slowly than the cumulative data of every transaction because it is required to destroy one (or more) UTXOs in order to create fresh ones. In addition, even much of the UTXO set is not required to be readily available to nodes. For example, Satoshi's coins from 2009 to 2011 that have not moved in over a decade will need to be available forever in case of his return, but they do not need to be available in immediate node memory. They can be retrieved from slower storage in the unlikely event they do reactivate. The same is true of large numbers of other old, inactive or burnt UTXOs.
+
+This opens an enormous opportunity for space saving. As Satoshi explains in [section 7 of the whitepaper](/bitcoin.pdf), spent transactions of sufficient age can be deleted.
+
+<img src={pruning} alt="Pruning for scale" />
+
+This observation rests on the pragmatic reality that an unknown attacking Proof of Work chain that reversed 6 months or more of transactions would be rejected by the Bitcoin community as illegitimate - even if it presented greater proof of work than the existing chain. It is simply not practical (or desirable for the overwhelming honest majority of the ecosystem) to reverse that much economic activity (even today, but even more so at global scale). Thus, data verifying transactions older than 6 months (or sufficient timespan) can be discarded in a continuous process to refresh storage space for new transactions.
+
+In future, nodes will operate in two different capacities, pruned nodes & archival nodes. Full copies of all blockchain data ever will still be available from archival nodes. However these archival nodes will be a specialised service offered according to market demand for analytics & historical insight. There will certainly be interest in such cryptocurrency data, even at its small size today there are many companies in the cryptocurrency industry specialising in such data (e.g. [Dune Analytics](https://dune.com/home), [Glassnode](https://glassnode.com/), [Coinmetrics](https://coinmetrics.io/)), but even in the worst case where there was no archival nodes & only pruned nodes Bitcoin can function perfectly well and would not be compromised.
+
+#### BTC Node Operator Psychology
+
+:::tip
+
+Many highly invested BTC users will protest at this idea of pruning their valuable node. "That's not Bitcoin! I am sovereign and my node will preserve data immutably forever!"
+
+Maybe, and BTC is welcome to follow that experiment (although it has [many problems](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc)). But Bitcoin Cash is following the Bitcoin whitepaper design in order to get non-custodial peer-to-peer cash to billions of people. Pruning nodes is an essential part of Bitcoin's design & has been since day 1.
+
+This obsession with storing data immutably forever (even if it is irrelevant for all practical purposes & handicaps the ability for Bitcoin to get to global scale) is nothing to do with engineering, it is instead born from a psychological (or philosophical) attempt by those node runners to desperately cling to perpetual, objective truth in an ever-changing world.
+
+There may indeed be a place for that, but it isn't Bitcoin: A peer-to-peer electronic cash system. Most people don't have this psychological defect, they just want their payments to be fast, cheap & reliable. Network resiliency to censorship/attack and all important properties (21 million fixed coin supply etc.) are preserved just fine by pruned nodes (which are easy to run in large numbers).
+
+:::
+
+## Other scalability notes
+
+- **Lack of Ordinals**: Bitcoin Cash [does not have Ordinals](/faqs/BCH-vs-BTC/does-bch-have-ordinals) due to avoiding the SegWit modifications that happened on BTC, therefore it does not suffer scaling issues from having lots of arbitrary non-financial data embedded in the chain.
+- **Rising fees**: Will not be a problem, see [Will BCH fees rise? Aren't BCH fees low due to low transaction volume? Won't rising volume / price increase fees?](/faqs/BCH/will-bch-fees-rise).
+- **Blocksize increases**: The community has implemented measures to ensure BCH blocksizes can adapt to network demand, avoiding roadblocks of a static limit or foolish scaling ahead of necessity. See [What is the maximum Bitcoin Cash blocksize? What is ABLA?](/faqs/BCH/what-is-the-maximum-bch-blocksize)
+
+See also: [What do you mean by "Following Bitcoin Cash on its rise to global reserve currency"?](/faqs/Global-Reserve-Currency/what-do-you-mean-global-reserve-currency)

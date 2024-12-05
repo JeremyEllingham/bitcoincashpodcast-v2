@@ -1,0 +1,55 @@
+---
+id: will-BCH-lower-or-change-its-10-minute-block-time
+sidebar_position: 16
+title: Will Bitcoin Cash lower (or change) its 10 minute block time?
+---
+
+No.
+
+Although a change to the blocktime is conceptually plausible & could theoretically be [co-ordinated through the CHIP process](/faqs/Decentralisation/how-does-BCH-governance-work), The Bitcoin Cash community has no appetite for such a change & will not lower (or change) the 10 minute block time.
+
+## Importance of Confirmations
+
+As a new & often poorly-implemented technology, cryptocurrency advocates are often inadvertantly over-enthusiastic about the security provided by transaction confirmations. Misconceptions abound because of [the propaganda](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc) of BTC advocates which includes [false claims Bitcoin is terrible payments technology](/faqs/Tech/what-is-0-conf#btc-misconceptions). In addition, confirmations are both intriguing to curious new cryptocurrency adopters & broadly similar among all cryptocurrencies hence garner widespread familiarity. Many cryptocurrency adopters are conditioned to work around a system of confirmations in assessing their transactions' reliability.
+
+The Bitcoin Cash community has a different strategy to many other communities in this regard. As far as possible, work is done to ensure [transactions are effectively instant](/faqs/Tech/what-is-0-conf) & confirmations are irrelevant.
+
+Transaction reliability is created as soon as a transaction is sent over the network through [first-seen node policy](/faqs/Tech/what-is-0-conf), [Double Spend Proofs](/faqs/Tech/what-is-0-conf#double-spend-proofs-dsps) & [Zero Confirmation escrows](/faqs/Tech/what-is-0-conf#zero-confirmation-escrows-zces). Confirmations are intended as a formality rather than a requirement for most users in most cases (ultra-high value transactions may be a different case).
+
+Over time, less & less BCH wallets & apps will even display confirmations to the user. It will become a behind-the-scenes technical detail that 99% of users are entirely unaware of. This is necessary for the slick UX demanded by end consumers at [global reserve currency scale](/faqs/Global-Reserve-Currency/what-do-you-mean-global-reserve-currency). For instance [Selene Wallet](/episodes/82).
+
+## Does lower blocktime = faster?
+
+No.
+
+If a transaction can reliably be accepted as soon as it is seen on the network, it's not possible to be any faster. Thus the BCH community has already pre-empted any amount of lowering blocktimes, with a faster system by default.
+
+1 minute blocks may be quicker to get a confirmation than 10 minute blocks, but both are far slower than "I saw your payment, thanks." Converts to BCH from other communities gradually learn to accept payment at instant speed instead of being concerned with confirmations as they were in the past.
+
+## Does lower blocktime = faster acceptance on exchanges?
+
+No.
+
+Cryptocurrency exchanges are a special case when it comes to transaction acceptance. See [this explanation](/faqs/Tech/what-is-0-conf#cryptocurrency-exchanges).
+
+Many cryptocurrency advocates may see other cryptocurrencies with shorter blocktimes & reason this makes them faster on exchanges. For instance, if a cryptocurrency exchange requires 5x 10 minute block confirmations (50 minutes) to process Bitcoin Cash deposits, wouldn't 5x 1 minute block confirmations (5 minutes) be much faster?
+
+If Bitcoin Cash lowered its blocktime 10x, it's likely exchanges would simply raise their required confirmation amount 10x to compensate. Instead of 5x 10 minute blocks, now 50x 1 minute blocks would be required - 50 minutes in either case. Decreasing blocktime simultaneously & proportionally decreases the security provided by each block. Exchanges have set their risk tolerance for each coin (such as Bitcoin Cash) deliberately & aren't going to open themselves to potential theft by ignoring a dramatic change to the network's security model.
+
+Note this is especially relevant in the case of BCH, as it has [minority SHA256 hashrate](/faqs/BCH-vs-BTC/is-low-hashrate-a-problem).
+
+Other cryptocurrencies may have different considerations regarding their specific blocktime, community or technology which exchanges are factoring in. This is not relevant to discussion of changing the BCH blocktime.
+
+## Does lower blocktime = more throughput?
+
+No.
+
+Faster blocks only allow more throughput if blocksize is artificially capped. For instance, Litecoin (2.5 min blocks) has higher transaction throughput per minute than BTC (10 minute blocks), because both are capped by their 1 MB blocksize limit. Thus Litecoin can process 4x as many transactions (4 MB / 10 mins) as BTC (1MB / 10 mins) in an average 10 minute window. [Note for the pedantic: BTC does still have a 1 MB blocksize although it now calculates using up to 4MB of "block weight"].
+
+However this reasoning does not apply for Bitcoin Cash. It does not have an artificially capped blocksize, instead it has [ABLA](/faqs/BCH/what-is-the-maximum-bch-blocksize) ensuring sufficient throughput for expected demand. The entire transaction backlog (mempool) is expected to clear every single block, except in rare circumstances. If throughput is insufficient, the solution is to raise the blocksize rather than to increase the speed of blocks.
+
+## Other Reasons Not To Lower Blocktime
+
+- **Scaling Tradeoffs**: Low blocktimes make confirmations faster, but increase orphan risk for miners & increase the advantage that a miner has when they find a block over their competition (since they get a headstart on the next block). Long blocktimes are the opposite. Satoshi chose 10 minutes as reasonable but somewhat-arbitrary "middle ground" & it has proven perfectly serviceable. Aside from the lack of upsides as explained above, the BCH community would be against decreasing block times unless it was shown to not have a deleterious effect on miner centralisation & block propagation of very large blocks.
+- **Existing scripts**: Existing BCH transactions may have coins locked for a certain number of blocks (presumed to approximate a certain duration of time). Adjusting the block time messes with those transactions unnecessarily.
+- **The real Bitcoin**: Although very minor in practice, changing the 10 minute blocktime veers a little close to moving away from "[the real Bitcoin](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin)", something the BCH community is never keen to do. Although blocksize limit was never considered an essential part of the Bitcoin design in the BCH community, blocktimes skates a little closer to that line - so without an overwhelmingly compelling reason to change the status quo is more than sufficient.

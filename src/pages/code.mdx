@@ -2,9 +2,15 @@
 title: Code
 ---
 
+import forEVMdevs1Url from "@site/static/img/code/forEVMdevs1.png";
+import forEVMdevs2Url from "@site/static/img/code/forEVMdevs2.png";
+import forEVMdevs3Url from "@site/static/img/code/forEVMdevs3.png";
+import forEVMdevs4Url from "@site/static/img/code/forEVMdevs4.png";
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+
 # Code
 
-Bitcoin Cash is a social movement, but it's also a technical project. The code that runs Bitcoin Cash nodes and miners is all open source, as are many BCH wallets and community tools, which means the full program is available for free for anyone to review, download, copy or submit updates.
+Bitcoin Cash is a [social movement](/faqs/Global-Reserve-Currency/how-will-BCH-onboard-the-entire-world), but it's also a technical project. The code that runs Bitcoin Cash nodes and miners is all open source, as are many BCH wallets and community tools, which means the full program is available for free for anyone to review, download, copy or submit updates.
 
 Because the code is available to everyone, it is:
 
@@ -22,19 +28,32 @@ Contributions (pull requests and suggestions) are always welcome from the commun
 
 ## Other BCH Development Resources
 
+### Podcast episodes
+
+To upskill on the BCH JS tech stack, highly recommended to listen to this episode of the Podcast:
+
+<CustomReactPlayer
+  url={"https://www.youtube.com/watch?v=MdZUcCjkY6A"} />
+
+### Background material
+
 A lot of good BCH background material can be found at:
 
 - [Developers.cash](https://developers.cash/)
 - [Reference.cash](https://reference.cash/)
+- [Documentation.cash](https://documentation.cash/)
 - [Bitcoin Cash.site](https://bitcoincashsite.com/build/)
 - [Cash Stack documentation](https://permissionless-software-foundation.github.io/cashstack.info/)
 - [Fullstack.cash documentation](https://fullstack.cash/documentation/)
 - [Mastering Bitcoin Cash](https://zh.thedev.id/mastering-bitcoin-cash/)
 - [Smart contracts on ETH, BTC, BCH](https://kalis.me/smart-contracts-eth-btc-bch/)
+- [Mr Zwets Youtube channel](https://www.youtube.com/@mrzwets)
+- Check out the [FAQ page on CashTokens](/faqs/Tech/what-is-cashtokens)
 
-For building JavaScript applications
+### For building JavaScript applications
 
 - [Libauth](https://github.com/bitauth/libauth)
+- [CashScript](https://cashscript.org/)
 - [Chaingraph API](https://chaingraph.cash/)
 - [Mainnet.cash](https://mainnet.cash/)
 - [Electrum Cash Protocol](https://bitcoincash.network/electrum/protocol-methods.html#blockchain-address-get-history)
@@ -42,13 +61,29 @@ For building JavaScript applications
 - [Electrum Cash React Native](https://gitlab.com/SicutDominus/electrum-cash-react-native)
 - [Awesome Bitcoin Cash](https://github.com/2qx/awesome-bitcoin-cash)
 - [Unspent App for CashScript Contracts](https://unspent.app/)
-- [CashScript Updates Twitter](https://twitter.com/CashScriptBCH)
+- [Fulcrum HTTP server](https://github.com/mainnet-pat/fulcrum-http)
 
-Tutorials
+### Specific Tooling
+
+- [BCH raw transaction editor](https://defunct-operator.github.io/bch-tx-editor/)
+
+### Other languages
+
+- [BitcoinCashClient](https://github.com/david-shattuck/BitcoinCashClient): For C# .Net
+
+#### Swift
+
+- [Swift Fulcrum](https://github.com/58opals/SwiftFulcrum)
+- [Opal Base](https://github.com/58opals/OpalBase/tree/develop)
+
+### Tutorials
 
 - [CashScript Tutorial videos](https://www.youtube.com/watch?v=uzzUEQSKTh4)
+- [Permissionless Software Foundation videos](https://www.youtube.com/@permissionlesssoftwarefoun3626)
 
 Block explorers and other metric tracking sites can be found on the [Stats page](/stats#on-chain-bch-data).
+
+### Full nodes
 
 Full-node dev teams can be found at:
 
@@ -59,14 +94,38 @@ Full-node dev teams can be found at:
 - [Knuth](https://github.com/k-nuth/kth)
 - [Flowee](https://flowee.org/)
 
+### Other developers
+
+- [OP Return](https://opreturn.me/)
+
+### More
+
 For contributing to community projects and information sources:
 
-- [Use.cash code](https://github.com/marcfalzon/usecash)
+- [Use.cash: Onboarding resources](https://github.com/marcfalzon/usecash)
+- [CashNinjas: Open source NFT tooling](https://github.com/cashninjas)
+
+## For EVM Developers
+
+Welcome! Note that BCH is a UTXO chain and quite different to what you may be used to. This has a bit of a learning curve, however, it comes with a lot of advantages:
+
+<img src={forEVMdevs1Url} alt="UTXO model advantages" />
+
+<img src={forEVMdevs2Url} alt="UTXO model advantages 2" />
+
+[Original source](https://twitter.com/bitjson/status/1658158652870598656)
+
+<img src={forEVMdevs3Url} alt="UTXO model advantages 3" />
+
+<img src={forEVMdevs4Url} alt="UTXO model advantages 4" />
+
+[Original source](https://twitter.com/nikzh/status/1658437566859735042)
 
 ## BCH Developer Community
 
 To get involved more in Bitcoin Cash development in general, check out:
 
+- [ShadowWizards: BCH DeFi Product & Tech Dev](https://twitter.com/Shadow__Wizards)
 - [Bitcoin Cash Network Discussions](https://bitcoincashnetworkdiscussions.org/)
 - [Bitcoin Cash Research](https://bitcoincashresearch.org/)
 - [SmartBch.org](https://smartbch.org/)
@@ -75,6 +134,14 @@ To get involved more in Bitcoin Cash development in general, check out:
 And there is good Telegram groups at:
 
 - [BCH Builders](https://t.me/bchbuilders)
+- [CashTokens Devs](https://t.me/cashtoken_devs)
+- [Permissionless Software Foundation](https://t.me/permissionless_software)
+- [Selene Wallet](https://t.me/SeleneWallet)
+- [bch-js toolkit](https://t.me/bch_js_toolkit)
+- [Mainnet.cash Devs](https://t.me/mainnetcash)
+- [BCH Compilers](https://t.me/bch_compilers)
+- [Chaingraph Devs](https://t.me/chaingraph_dev)
+- [Libauth Devs](https://t.me/libauth_devs)
 - [SmartBCH Developers Telegram](https://t.me/smartbchdevelopers)
 
 BCH always needs more engineers, and there's lots of opportunities available in the scene with everything from wallet dev, dApps, nodes, mining, supporting services and more.

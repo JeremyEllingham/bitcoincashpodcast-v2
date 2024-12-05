@@ -1,0 +1,84 @@
+---
+id: do-bigger-blocks-centralise-nodes
+sidebar_position: 2
+title: Do bigger blocks centralise nodes?
+---
+
+import CentralisingNodesUrl from "@site/static/img/faqs/CentralisingNodes.png";
+import GoldiblocksUrl from "@site/static/img/faqs/Goldiblocks.jpeg";
+import ScalingHardwareUrl from "@site/static/img/faqs/scalingHardware.png";
+
+<img src={CentralisingNodesUrl} alt="Centralising nodes" />
+
+_Everything in engineering is tradeoffs. Only incompetent engineers would choose the sub-optimal tradeoffs at the far left & right of the spectrum - it's clear a carefully chosen middleground is the healthiest choice. [Source](https://twitter.com/MKjrstad/status/1736042838398271595)._
+
+If carefully managed, blocksize increases do not centralise nodes. If handled irresponsibly, yes they absolutely will.
+
+Higher Bitcoin throughput requires more expensive hardware, but hardware costs also decrease over time (providing increased throughput at identical cost) which should be anticipated & adjusted for. Furthermore, the total number of running nodes is somewhat proportional to the size of the total economy the network supports. Creating a more attractive (i.e. lower fee) payments network for consumers grows the Bitcoin Cash network. Besides its many other benefits - increased monetary network effect, faster technology development and so on - expanding the ecosystem to more participants increases the pool of both individuals & businesses with motivation & economic need or capability to contribute to the network by running a node.
+
+:::tip
+
+"Nodes" in the [Bitcoin whitepaper](/bitcoin.pdf) referred exclusively to mining nodes (at Bitcoin's inception, there was no such thing as non-mining nodes). Over time this meaning has become more generalised and the term "node" in general parlance now signifies a network node with a full copy of the blockchain (a "full node"), whether it is a miner or not. It is this sense of "full node" which is being referred to in this article.
+
+:::
+
+## Contention over Nodes
+
+One of the key points of contention between BCH & BTC supporters is the role of Bitcoin nodes in the network. This topic was heavily debated [during the Blocksize War](/start#episode-8-of-10-bitcoin-cash) & remains an ongoing area of frequent [BTC propaganda](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc).
+
+In general, each side has the following attitude towards nodes:
+
+- **BCH:** End-users may or may not run a node, the key point of Bitcoin being that they can use it as a peer-to-peer electronic cash currency [with cheap fees](/faqs/BCH/will-bch-fees-rise). Nodes should be run by miners, exchanges, large BCH-accepting merchants, developers, BCH wallet/infrastructure providers & enthusiastic hobbyists. Node costs must be balanced against other considerations such as non-custodial access to trustless Layer 1 payments for [the entire global population](/faqs/Global-Reserve-Currency/what-do-you-mean-global-reserve-currency). Node costs are naturally subsized by [ongoing improvement in computer hardware](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency#scaling-pillar-2-hardware-innovation) plus they can also be mitigated with technical development of [pruned nodes](/faqs/Global-Reserve-Currency/can-BCH-technically-scale-to-global-reserve-currency#scaling-pillar-3-pruned-nodes). A lower percentage of users running nodes is potentially an acceptable tradeoff for a larger pool of total nodes (i.e. 100% of 100 users is 100 nodes, but 1% of 1 000 000 users is 10 000 nodes.).
+- **BTC:** Nodes should be run by the maximum possible number of end-users. This is the priority concern of the network (resilience to attack & sovereignty of end users) & is worth maintaining a static blocksize limit. To many BTC supporters, it is even more important that users can afford to run a network node than be able to afford to use the network to make a Bitcoin transaction! Non-institutional Bitcoin end-users should look to alternatives like [the Lightning Network](/faqs/BCH-vs-BTC/what-about-lightning-network) if they want to use Bitcoin as a currency. A lower percentage of node operators is not acceptable, even if by increasing the user base it would improve the total number of nodes.
+
+## Nodes & Decentralisation
+
+More nodes is better when it comes to decentralising a cryptocurrency, but it also has diminishing returns. The difference between 10 & 11 nodes run by separate entities is significant (approximately 10% harder to shut down the entire network, greater network connectivity & so on), but the difference between 100 000 & 100 001 is quite marginal. Past a threshold of redundancy / resilience to attack, the benefit of additional nodes is limited.
+
+Increasing blocksizes are not proportional to a reduction in total node operators. A 10x increase in blocksize will generally not increase costs 10x for node operators nor create a 10x reduction in network nodes. This is because of economies of scale - consider that a 10x larger harddrive or a 10x faster internet connection is usually not 10x the cost of a proportionally more limited option.
+
+Note that nodes are far from the only factor in establishing decentralisation of a cryptocurrency. As well as having sufficient nodes, a network also needs to have a decentralised political process, investor base, mining ecosystem, wallet ecosystem, news outlets, geographic distribution & so on. While having a healthy set of distributed nodes is required for a cryptocurrency to be well decentralised, it is not the only (or even primary) metric to consider. Failing to understand this is why many BTC adopters have the misconception they are the "most decentralised" cryptocurrency because of having many nodes, without understanding the [centralised capture of their development process](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc).
+
+## What's the correct blocksize?
+
+<img src={GoldiblocksUrl} alt="BCH has Goldiblocks" />
+
+_Blocks too small centralises access to only a tiny number of users that can afford high on-chain fees to transact. Blocks too large centralises node operators by raising infrastructure costs. Moderation in all things. [Credit to Almaas_Dast](https://twitter.com/Almaas_Dast/status/1737492335754166699)._
+
+Amazingly, through the BTC/BCH chain split & later the BCH/BSV chain split, Bitcoin history has provided real-world examples of three different approaches to scaling blocksize & the tradeoffs of each option.
+
+### Moderate blocksize increases ("just right") - BCH
+
+Bitcoin Cash adopts a "moderate" strategy to increasing blocks. It allows gradually increasing block sizes over time to accomodate improving technology. This process is managed by [the ABLA algorithm](/faqs/BCH/what-is-the-maximum-bch-blocksize) to ensure growth remains responsive to real demand & within the bounds of improving technology. This gives infrastructure operators (miners, full nodes, wallet services, block explorers, exchanges & other businesses) clear guidance to plan their operation resources for the present & foreseeable future. In addition, ABLA replaces the need for the BCH community to periodically discuss, debate & co-ordinate blocksize increases.
+
+The BCH community believes in scaling commensurate to improving hardware capabilities, software innovation & retaining cheap access to the Layer 1 blockchain for end consumers. Fees have remained low.
+
+BCH does not have the largest number of nodes though. As of February 2024, there are around 750 BCH nodes. This is NOT due to the blocksize directly (BCH traffic is still cumulatively lower than BTC traffic) but instead due to the small size of the community & low cultural emphasis on the importance of running a node.
+
+### Low, static blocksize ("too small") - BTC
+
+<img src={ScalingHardwareUrl} alt="Scaling hardware" />
+
+Maintaing a static blocksize of 1 MB (and a 4MB "block weight" following the SegWit soft-fork) was adopted by the "small blocker" side of The Blocksize War, who retained the BTC ticker symbol.
+
+This choice (in combination with the advantage of retaining the Bitcoin brand name & initial network effect) has given BTC by far the largest number of network nodes. The BTC network undoubtedly has the greatest redundancy in terms of network nodes & highest difficulty to completely destroy.
+
+There was a heavy price to pay though. This adamance that 1MB was an essential limit to retain node decentralisation allowed for political capture of the network by Bitcoin Core while simultaneously ensuring that non-custodial scaling to a larger pool of consumers became impossible (or contingent on some as-yet-undefined breakthrough). As of February 2024, the BTC community is coming to serious internal disagreement over its scaling plans & future vision given this self-imposed technical constraint alongside its gridlocked political state.
+
+Far from ["driving creative solutions"](/faqs/BCH-vs-BTC/is-a-1MB-limit-needed-to-increase-creativity) as the [propaganda](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc) claimed, BTC with its 1 MB blocksize has faltering consumer adoption as a payments system. [Lightning Network](/faqs/BCH-vs-BTC/what-about-lightning-network) is increasingly recognised as a failure. Other "Layer 2 solutions" rotate in popularity & hype but none have shown significant technical or social promise. Exposure to BTC is increasingly mediated by custodians (such as large cryptocurrency exchanges, custodial wallet providers or ETFs). All of these things are anathema to the original vision of Bitcoin [outlined in Bitcoin's whitepaper](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin).
+
+Some BTC supporters may believe that the BTC blocksize is not fixed & "can be easily raised when necessary", but [nothing could be further from the truth](/faqs/BCH-vs-BTC/what-if-btc-raises-block-size). Until demonstrated by an unlikely & surprising turn of history, the status quo will constantly entrench BTC as a 1MB chain.
+
+### Unlimited blocksize ("too large") - BSV
+
+In 2017 & 2018, opinions of "big blockers" were split to such an extent that the Bitcoin Cash project split into two further competing chains - Bitcoin Cash (BCH) & Bitcoin Satoshi's Vision (BSV). The BSV side believed not in just bigger blocks - but in the biggest blocks possible, even unlimited blocks.
+
+Rather than seeing blocksize as being a careful balance between redundancy & capacity (mitigated by technological improvement) like the BCH community, they instead believed that no blocksize should be set or managed within the protocol at all. They preferred to let the "free market" shoulder the burden of deciding on appropriate blocksizes, to the extent of even celebrating network downtime or service failures as "pushing the limits" of BSV. From their point of view, any node operator, miner or service that could not afford or could not feasibly maintain the technical or infrastructure costs of a limitless amount of throughput should be considered unimportant to the network.
+
+In pursuit of this objective, not only did the BSV community remove any blocksize limit, they also increased the on-chain data storage capabilities and lowered minimum network fees from fractions of a cent (in the $0.001 range of BCH) to several magnitudes cheaper that that. Traffic on the BSV network exploded, not due to an organic rise in end-consumer demand, but instead due to enormous throuphput of supposed "apps", such as one that stored weather data on the blockchain. The BSV community celebrated this as "innovation" & "proof of scalability", but critics rightly identified this as essentially automated spam. Transaction volumes climbed to hundreds of millions of transactions (gigabyte sized blocks) despite very little time for technology to improve or engineering efforts to be made in improving node software performance.
+
+These radical & unrestrained technical choices, along with a cultural emphasis on dismissing any pushback from service operators or node runners, quickly shrank their network to a point of almost complete centralisation. Exchanges delisted BSV because (among other reasons) they could not afford to run such demanding node infrastructure for such a small community of customers. Service operators such as block explorers did the same. Home node operators gave up on trying to service such an unfeasibly large volume of traffic.
+
+BSV is down to just a handful of nodes (less than 10 - perhaps operated in reality by just one or two entities), essentially forfeiting any claim to decentralisation & resilience. The BSV community remain unconcerned by this, but are at perpetual risk of having their entire network simply stop existing. No end users run a node & nor do most of the very few businesses in the ecosystem, so they would have no recourse in the case of a cessation of service or involuntary asset seizure. This serves as a pertinent warning to the BCH community that blocksize increases must be managed with prudence & careful analysis of the engineering & economic tradeoffs.
+
+See also: [Why is there so much propaganda in BTC?](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc)

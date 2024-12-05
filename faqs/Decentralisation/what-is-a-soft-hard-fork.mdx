@@ -1,0 +1,70 @@
+---
+id: what-is-a-soft-hard-fork
+sidebar_position: 6
+title: What is a soft/hard fork?
+---
+
+
+import BitcoinForksUrl from "@site/static/img/faqs/BitcoinForks.png";
+
+<img src={BitcoinForksUrl} alt="Bitcoin forks URL" />
+
+_Diagram of Bitcoin forks & splits to June 2023. Note that Bitcoin underwent both hard & soft forks before its initial chain split to BTC/BCH. Diagram is periodically updated by [Reddit user lugaxker](https://www.reddit.com/user/lugaxker/submitted/)._
+
+:::danger
+
+A hard fork is **NOT** a chain-split. This is a VERY common misconception (or piece of [propaganda](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc)). The difference is explained below.
+
+:::
+
+New entrants to cryptocurrency are often confused & bamboozled by terminology around soft/hard forks. As a finnicky, technical topic specific to cryptocurrency it is very common for the exact nuances to be misunderstood. A large part of the confusion is that a third phenomon, called a "chain split" is often erroneously conflated with a hard fork. 
+
+It is essential to understand a chain split before clarifying soft vs hard forks.
+
+## Chain split
+
+A "chain split" is when a fork (_either_ a hard-fork OR a soft-fork) causes a single blockchain to split into two separate coins. Most famously, this occured in [The Blocksize War](/start#episode-8-of-10-bitcoin-cash) between BTC & BCH, but it also happened when BCH split again in the BCH/BSV split in late 2018 and also the BCH/XEC split in late 2020. Splitting is not unique to Bitcoin - it can happen on any blockchain, as with the ETH/ETC split - but there are no notable splits outside of those cases. Only Bitcoin & Ethereum have historically had sufficiently sized communities to mean a disputing minority is significant enough to create & sustain the conditions for two indepent coins to emerge from one.
+
+The determining factor in whether a (hard or soft) fork causes a split is not the fork itself, it is whether there is **enough community controversy/contention for a substantial minority to protest the proposed changes**. The reason for a chain-split is **<u>social, not technical</u>**. If there is sufficient disagreement before an upcoming fork, one or both camps within a single cryptocurrency may battle over control of the chain (with either one or both sides proposing a set of controversial desired changes). As a unique kind of non-violent, social consensus based warfare only possible in cryptocurrencies there is not a truly well-established set of norms governing these kinds of conflicts, however in general it is true that:
+
+- The battleground is a combination of in-person conferences & meetups in addition to community debate online. This political dispute may or may not escalate to direct economic/cryptographic warfare via (Bitcoin/Ethereum) [miners](/faqs/BCH-vs-BTC/is-low-hashrate-a-problem). There are no current chain splits that have emerged from Proof of Stake.
+- A dispute is going to be pretty serious & probably take at least 6 months and up to multiple years of civil conflict before eventuating in a split. Except for the ETH/ETC split, which due to its precipitating factor (timelocked coins) had to be resolved within a month, all the other Bitcoin splits were from 9 months to 3 years in duration.
+- The winning side of the conflict retains the brand name, icon & exchange ticker of the pre-split chain. This is an enormous victory because the network effect of branding, technical integrations & exchange-traded liquidity is incredibly powerful.
+- The losing side of the conflict is forced into choosing a new name, icon & ticker symbol (starting from no exchange liquidity). Having to rebuild these assets/network effect from scratch is incredibly taxing to the losing side & leads to poor price performance of their coin relative to the winner (at least in the medium term).
+- The aggreived losing side will often set out to reclaim marketplace dominance over their former compatriots with a [Flippening](/faqs/BCH-vs-BTC/can-bch-flip-btc). This dynamic will likely lead to [ongoing resentment](/faqs/BCH-vs-BTC/why-do-btc-coiners-have-such-a-specific-vendetta-against-bch) on both sides of the conflict.
+
+## Hard forks
+
+A hard-fork is **a non-backwards compatible upgrade to a cryptocurrency**. In other words, it can add, remove OR change consensus rules to the network of validating nodes.
+
+A hard-fork *may* lead to a chain-split (creation of two coins), but it is *not REQUIRED to*. Hard forks & chain splits are *related but separate* concepts. A cryptocurrency can hard fork without splitting **if there is no community contention**.
+
+The original Bitcoin hard-forked in 2010 & 2013 without causing a chainsplit.
+
+The Bitcoin Cash community does a yearly hard fork network upgrade, co-ordinated through the [CHIP Process](/faqs/Decentralisation/how-does-BCH-governance-work). Since 2021 this has proceeded perfectly on a yearly schedule (May 2021, May 2022, May 2023... etc.) without any network disruption.
+
+### BTC Hard Fork Propaganda
+
+BTC supporters are often opposed to doing hard forks. Part of the [propaganda](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc) during the Blocksize War was to smear hard-forks as dangerous & risky (rather than a clean way to upgrade the network). This was one method to attack a blocksize increase as unsafe, by associating it with the dangerous sounding label "hard fork". 
+
+One argument was that if hardforks can be done to raise the blocksize, perhaps it could also be done to alter essential [sound money properties of Bitcoin](/start#episode-1-of-10-money), such as by removing the 21 million coin limit or similar changes. This is of course total nonsense, the Bitcoin community had already performed hardforks for important upgrades without any hint of anyone wanting to compromise the core aspects of Bitcoin prior to The Blocksize War & the BCH community has continued that since 2017. 
+
+:::tip
+
+As of January 2024, the idea of abandoning the 21 million coin limit has begun circulating in the BTC community. See [this discussion on Episode 103](https://youtu.be/FBy8qHH5P5U?t=5200). Once again, the irony could not be any thicker as the BTC community struggles with the issues they had slandered & erroneously predicted in the BCH community.
+
+:::
+
+A suggestion is required to get enormous ecosystem traction before implementation & no-one in BCH wants to compromise the essential aspects of Bitcoin.
+
+BTC supporters may have a belief that a hardfork is impossible without central co-ordination, but BCH does it regularly, so it's quite obviously possible. They are either unaware of this fact, or when questioned on it claim there must be a central co-ordinating entity in BCH but can tellingly never identify who or where that is.
+
+## Soft forks
+
+A soft-fork is **a backwards compatible upgrade to a cryptocurrency**. In other words, it can add but NOT remove or change existing consensus rules to the network of validating nodes.
+
+A soft-fork can cause a chainsplit if a substantial portion of the network decided to actively fight back or preserve the original non-upgraded rules. There aren't any high profile examples of this though, because The Blocksize War divided people into the SegWit soft-fork BTC & the 8 MB Bitcoin Cash big block hard-fork, with trivial to non-existent support for a 1 MB non-SegWit alternative. However it is possible to chainsplit against a softfork, for instance by checkpointing a block conforming only to the existing rules that the majority of miners (who had implemented the softfork) had rejected. Here is a [Twitter thread discussing this scenario](https://twitter.com/TheBCHPodcast/status/1697270378140225988) with Luke DashJr, the original inventor of the SegWit soft fork.
+
+Just as with hard-forks, the BTC community largely have [propaganda](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc) around this version of forks. They believe that soft-forks are superior (as unupgraded nodes will default to the same network as the upgraded nodes) because they claim it is "non-coercive" (i.e. no upgrade is required of existing nodes to stay on the network). This ignores the fact that a soft-fork can actually be MORE coercive, by bringing along existing nodes to an upgrade they were unaware of (for instance, the [substantial change made by SegWit](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin#segwit)). With a hard-fork, not only is it easier to perform a technically clean upgrade but also nodes that are inactive will "protest"/reject the change by default. In contrast, for a soft-fork inactive users will comply by default which seems like an odd default to support if you're concerned about coercing users.
+
+See also: [Why is there so much propaganda in BTC?](/faqs/BCH-vs-BTC/why-is-there-so-much-propaganda-in-btc)

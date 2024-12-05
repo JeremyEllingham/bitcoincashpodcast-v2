@@ -1,10 +1,11 @@
 ---
 id: what-is-anyhedge
-sidebar_position: 3
+sidebar_position: 4
 title: What is AnyHedge and why is it exciting?
 ---
 
-import ReactPlayer from "react-player/youtube";
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+import anyHedgeRisks from "@site/static/img/faqs/anyHedgeRisks.png";
 
 AnyHedge is an on-chain BCH smart contract system allowing unbreakable contracts between speculators (who want to benefit from risk in volatile cryptocurrency/financial markets) and BCH users such as merchants or long term investors (who prefer to minimise or eliminate volatility risk in their BCH holdings). The driving force behind this innovation is [General Protocols](https://generalprotocols.com/), although they have structured much of the code and infrastructure to allow other providers to join the ecosystem (which will hopefully happen as the BCH economy grows).
 
@@ -18,16 +19,8 @@ I put $10 of BCH into a pot. You put $10 of BCH into a pot. At the end of 1 week
 - If the price of BCH goes down in that week, you get back less BCH than you started with because more BCH is needed from the pot to pay my $10.
 - Either way, I get back $10 of BCH and therefore don't have to fret about volatile cryptocurrency markets during that week and I can focus on running my business. I also don't have to worry about involving myself with [stablecoins like Tether](/faqs/Scams/tether), which add counterparty risk that could blow up in my face and leave me with nothing at any time. I know for sure that I will get paid out the necessary amount of BCH, because you and I have entered an unbreakable programattic contract with the collateral transparently secured that the decentralised BCH network will automatically follow through on.
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 40,
-    marginLeft: "auto",
-    marginRight: "auto",
-  }}
-  url={"https://www.youtube.com/watch?v=CpVgudYunB4"}
-  target="_blank"
-/>
+<CustomReactPlayer
+  url={"https://www.youtube.com/watch?v=CpVgudYunB4"} />
 
 ## Further Explanation
 
@@ -43,18 +36,28 @@ Current implementations of AnyHedge are reliant upon accuracy and continued upti
 
 Solutions will hopefully emerge over time as the BCH / AnyHedge market grows and more services provide oracles (and oracle aggregators), and better tooling can be developed to spread contract fulfillment risk across a collection of oracles / oracle aggregators. Other solutions may also arise such as voluntary economic penalties for oracle downtime on the part of oracle providers. This remains an experimental and open field for innovation.
 
+A good starting point might be this informative Reddit post by AnyHedge developer Jonathan Silverblood. [Original source](https://www.reddit.com/r/btc/comments/133nenu/question_is_bch_bull_as_centralized_as_coinflexs/jib9jj3/).
+
+<img src={anyHedgeRisks} alt="AnyHedge Risks" />
+
+See further discussion in [this thread](https://www.reddit.com/r/btc/comments/14fve35/bchbulls_price_oracles_and_decentralization/).
+
 ## Can I try it
 
 Yes. A live implementation of AnyHedge is available to experiment with at [BCH Bull](https://bchbull.com/). You will be transferring real BCH, start small!!
 
 AnyHedge is also available through an integration in the [Paytaca](https://www.paytaca.com/) mobile wallet.
 
+## Is it growing?
+
+Yes. Check out the [AnyHedge growth stats](https://gitlab.com/0353F40E/anyhedge-stats/-/blob/master/plots/plots.md), derived from publically available on-chain data.
+
 ## Benefits for Non-Users
 
 AnyHedge is a huge benefit to the entire BCH ecosystem, even for non users.
 
-- **Economic utility**: The thriving stablecoin market shows a massive demand for volatility management solutions in cryptocurrency, and AnyHedge allows BCH to address that need in a way unique to BCH that isn't fragile to counterparty risk, involvement of the fiat banking system. This is a huge value-add for BCH accepting merchants and users. It's also a reason for speculators to bring capital to the ecosystem to take advantage of the trading opportunities.
-- **Frozen coins**: Entering an AnyHedge contract requires both parties to contribute their BCH into a locked contract for the duration of the agreement. These frozen BCH are of course removed from the limited, circulating supply for that duration, and therefore restricting the amount available to trade on exchanges and thus boosting the price. As AnyHedge grows, larger and larger chunks of the circulating BCH supply will be frozen into contracts at any moment in time - creating liquidity and price increases for BCH investors.
+- **Economic utility**: The thriving stablecoin market shows a massive demand for volatility management solutions in cryptocurrency. AnyHedge allows BCH to address that need in a way unique to BCH without being fragile to counterparty risk or involvement of the fiat banking system. This is a huge value-add for BCH accepting merchants and users. It's also a reason for speculators to bring capital to the ecosystem to take advantage of the trading opportunities.
+- **Frozen coins**: Entering an AnyHedge contract requires both parties to contribute their BCH into a locked contract for the duration of the agreement. These frozen BCH are of course removed from the limited, circulating supply for the duration. This restricts the amount available to trade on exchanges and thus boosts BCH total liquidity & price. As AnyHedge grows, larger and larger chunks of the circulating BCH supply will be frozen into contracts at any moment in time - creating ever more liquidity and price increases for BCH investors.
 
 ## Where can I find out more
 
@@ -62,3 +65,4 @@ AnyHedge is a huge benefit to the entire BCH ecosystem, even for non users.
 - [AnyHedge Telegram Group](https://t.me/AnyHedge)
 - [BCH Bull Telegram Group](https://t.me/bchbull)
 - [Oracles.cash](https://oracles.cash/): General Protocols run signed price oracle for AnyHedge contracts.
+- [BCH Bull Premiums charts](https://www.monsterbitar.se/~jonathan/AnyhedgePremiums/): Find profitable opportunities to speculate or hedge.

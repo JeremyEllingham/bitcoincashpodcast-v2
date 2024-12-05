@@ -1,0 +1,31 @@
+---
+id: what-about-quantum-computing
+sidebar_position: 4
+title: What about quantum computing? Are my BCH safe?
+---
+
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+
+<CustomReactPlayer url={"https://www.youtube.com/watch?v=kU0a16FO9Kc"} />
+
+Quantum computing has not developed enough to be a short term (until 2026) threat to Bitcoin. In the medium term (2027 - 2035), it will become a non-trivial but manageable issue. Upgrading with defences against quantum computing is [under active investigation](https://bitcoincashresearch.org/t/post-quantum-crypto/845) by the Bitcoin Cash community.
+
+:::info
+
+Similar to the question of [hashrate](/faqs/BCH-vs-BTC/is-low-hashrate-a-problem), BCH has a giant advantage over most other cryptocurrencies by virtue of its sibling ancestry with Bitcoin BTC. Regarding quantum attacks, BCH benefits from the necessity for the BTC community to protect their network against the same threat. Any research or solutions emerging in the BTC community will of-necessity be open-sourced & so can be easily replicated or improved on by the BCH community.
+
+:::
+
+# Address Reuse
+
+Best practice is to use a fresh Bitcoin address for each transaction. Not only is this beneficial for increasing [privacy](/faqs/BCH/what-about-privacy-on-BCH) of the entire chain, but it also protects unspent coins against quantum attack.
+
+# Mining
+
+According to the research article [Quantum Attacks on Bitcoin, and How to
+Protect Against Them](https://research-management.mq.edu.au/ws/portalfiles/portal/93946576/93873513.pdf), quantum computing is not a medium term threat to SHA256 miners.
+
+In fact, the researchers found that ASICs (which do not [centralise the network](/faqs/Decentralisation/do-ASICs-centralise-bitcoin)) were actually a security boon against the arrival of quantum computing.
+
+> 3.1. Attacks on the Bitcoin Proof-of-Work—In this section, we investigate the advantage a quantum computer would have in performing the hashcash PoW used by Bitcoin. Our findings can be summarized as follows: Using Grover search,8 a quantum computer can perform the hashcash PoW by performing quadratically fewer hashes than is needed by a classical computer. However, the extreme speed of current specialized ASIC hardware for performing the hashcash PoW, coupled with much slower projected gate speeds for current quantum architectures, essentially
+> negates this quadratic speedup, at the current difficulty level, giving quantum computers no advantage. Future improvements to quantum technology allowing gate speeds up to 100GHz could allow quantum computers to solve the PoW about 100 times faster than current technology. However, such a development is unlikely in the next decade, at which point classical hardware may be much faster, and quantum technology might be so widespread that no single quantum enabled agent could dominate the PoW problem.

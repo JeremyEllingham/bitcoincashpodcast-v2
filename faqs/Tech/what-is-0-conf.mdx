@@ -4,31 +4,16 @@ sidebar_position: 1
 title: What is 0-conf? Are BCH transactions instant?
 ---
 
-import ReactPlayer from "react-player/youtube";
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+import firstSeenWhitepaper from "@site/static/img/faqs/firstSeenWhitepaper.jpg";
 
 Bitcoin Cash transactions (between non-custodial wallets, NOT to banking solutions like cryptocurrency exchanges) are, **in the vast majority of payment scenarios, effectively instant**. Take a look at these examples of demo and real world BCH usage, then read below for the finer details.
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 40,
-    marginLeft: "auto",
-    marginRight: "auto",
-  }}
-  url={"https://www.youtube.com/watch?v=Ml4fMFyY0iA"}
-  target="_blank"
-/>
+<CustomReactPlayer
+  url={"https://www.youtube.com/watch?v=Ml4fMFyY0iA"} />
 
-<ReactPlayer
-  style={{
-    paddingTop: 10,
-    paddingBottom: 40,
-    marginLeft: "auto",
-    marginRight: "auto",
-  }}
-  url={"https://youtu.be/LAywZg1TV5U?t=38"}
-  target="_blank"
-/>
+<CustomReactPlayer
+  url={"https://youtu.be/LAywZg1TV5U?t=38"} />
 
 Bitcoin Cash network nodes (and therefore miners) follow a "first seen relay policy". This means that a submitted transaction will pre-empt conflicting transactions from being accepted into the mempool of nodes. Network propagation time is within moments (similar to a WhatsApp or Telegram message) and so the only way to create a double spend (without the cooperation of miners, see below) is to send a "fraud" transaction and a "takeback" transaction within milliseconds of each other and hope that the latter reaches more of the network purely by chance and despite its delay. This is not trivial to even attempt, requiring technical knowledge, planning and co-ordinated execution. You will not see someone able to try this kind of fraud while purchasing a slice of pizza in front of even the most inattentive retail assistant!
 
@@ -38,13 +23,16 @@ Note also that it is up to the **receiving party** to determine when a transacti
 
 ## Double Spend Proofs (DSPs)
 
-The security of instant transactions on BCH has been upgraded with extra technology called "Double Spend Proofs". The highest potential for fraud occurs in the first couple of seconds after a transaction is sent as it propagates around the network to all BCH nodes and miners. Network nodes that receive conflicting transactions (in this initial high-risk window, or at any time) indicating a potential fraud attempt can publish a cryptographically verifiable alert to the rest of the node network. Receiving wallets or payment processors can display a notification to the user, and appropriate countermeasures taken (for instance, online goods marked for non-delivery & customer service investigation or no product handed over at a physical retailer). Remember that the risk of fraud is tiny, and of that risk the vast majority is in the first 2 seconds, so in practice even the fastest retail transaction still contains plenty of time for fraud to be detected, noticed & acted upon.
+The security of [instant transactions on BCH](/faqs/Tech/what-is-0-conf) has been upgraded with extra technology called "Double Spend Proofs". The highest potential for fraud occurs in the first couple of seconds after a transaction is sent as it propagates around the network to all BCH nodes and miners. Network nodes that receive conflicting transactions (in this initial high-risk window, or at any time) indicating a potential fraud attempt can publish a cryptographically verifiable alert to the rest of the node network. Receiving wallets or payment processors can display a notification to the user, and appropriate countermeasures taken (for instance, online goods marked for non-delivery & customer service investigation or no product handed over at a physical retailer). Remember that the risk of fraud is tiny, and of that risk the vast majority is in the first 2 seconds, so in practice even the fastest retail transaction still contains plenty of time for fraud to be detected, noticed & acted upon.
 
 # Miner cooperative fraud & collusion
 
 Large Bitcoin miners operate multi-million dollar industrial scale companies, and the cost ($10 000+), risk, reputational damage and time investment to attempt fraud collusion on every day payments means they never bother. The exception to this is payments to exchanges, see below.
 
 ## Cryptocurrency Exchanges
+
+<CustomReactPlayer
+  url={"https://youtu.be/EP5wCmOrVR4?t=5273"} />
 
 The major exception to 0-confirmation transactions is cryptocurrency exchanges. Cryptocurrency exchanges are often very conservative with crediting user deposits in BCH, potentially requiring 6 or even more confirmations to consider a transaction reliably accepted by the network. Unlike most other BCH economy participants, they are uniquely at high risk of double-spend fraud (user deposits BCH, swaps on the exchange for another cryptocurrency, withdraws that other cryptocurrency, then colludes with a miner to reverse the initial deposit and keep their original BCH as well). They also handle large time-sensitive payments regularly, so unlike most other parts of the economy they could be targeted for fraud by colluding with miners.
 
@@ -60,7 +48,13 @@ ZCEs are theoretical at this point in time. Fraud is so low in practice they hav
 
 0-conf itself is actually not even a technical innovation, it's simply an inbuilt property of the way [Bitcoin was designed](/bitcoin.pdf) at inception. It is fairly obvious that Satoshi would not have bothered to invent "next generation" money that was slower than the existing payment options online in 2008. Unfortunately, the negative experience of slow, unreliable payments on BTC, which [is not the real Bitcoin](/faqs/BCH-vs-BTC/is-bch-the-real-bitcoin), has tarnished the reputation of Bitcoin as a poor payments solution.
 
+<img src={firstSeenWhitepaper} alt="First seen whitepaper" />
+
+_Satoshi mentioned the first seen property in the whitepaper directly. However, the [first version of the Bitcoin code](https://github.com/trottier/original-bitcoin/blob/master/src/main.cpp#L434) did allow replacing transactions, which was updated once it became a DDoS vulnerability._
+
 A restricted blocksize creates a double-blind auction for BTC transaction fees, making transaction inclusion in a block unreliable and therefore waiting times unpredictable. In addition, BTC added rules called "Replace By Fee" to their nodes, allowing transactions to be replaced with a higher fee. This makes unconfirmed transactions deliberately unreliable and increases payment risks for the receiving party (the sending party may fraudulently revoke the funds by respending with a higher fee to themselves). Although originally opt-in (which was already bad enough), this problem got worse when Bitcoin Core doubled down by providing an option for nodes to default ALL transactions, even the ones that did NOT volunteer for it, into optional respending ("Full RBF").
+
+As of 2023, the removal of the first seen policy & introduction of compulsory Replace-By-Fee remains controversial to prominent members of the BTC community such as John Carvalho of Synonym & Sergej Kotliar of the payment focussed Bitrefill team.
 
 This is one of the many [problems with BTC](/faqs/BCH-vs-BTC/whats-wrong-with-bitcoin-btc).
 
