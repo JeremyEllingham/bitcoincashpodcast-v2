@@ -36,6 +36,12 @@ Yes.
 
 A regular cash address looks like `bitcoincash:qqkgjxugt4w45zvy7fmdnwegmrrgmt7y0vvarce0zs`, note the starting `q`. A CashTokens "token aware" address looks like `bitcoincash:zqkgjxugt4w45zvy7fmdnwegmrrgmt7y0vthsxhfar`, starting instead with a `z`. Regular BCH can be sent to a CashTokens address, but CashTokens cannot be sent to a regular cash address. The reason for having a new type of addresses is to prevent users from sending CashTokens to wallets that have not upgraded yet or that choose not to support CashTokens for some reason. CashTokens is likely to quickly become an industry standard feature within the BCH community, but certainly may take longer to spread into the broader cryptocurrency ecosystem (for instance, on large exchanges), where BCH specific features may not be a development priority.
 
+:::info
+
+You can convert a regular address to its CashTokens address equivalent using [this converter](https://kth.cash/wasm.html).
+
+:::
+
 Although wallets will not enable doing so, even if a user somehow does manage to send tokens to a regular cash address, it is impossible to respend or burn those tokens accidentally. The seed phrase from that wallet can be imported into a token-supporting wallet in order to get access to the tokens.
 
 ## How is it different to EVM tokens, such as ERC-20 or ERC-721 tokens?
