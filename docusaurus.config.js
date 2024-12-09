@@ -242,13 +242,13 @@ module.exports = {
         },
         gtag: {
           // You can also use your "G-" Measurement ID here.
-          trackingID: "x", // For local dev purposes
+          // trackingID: "x", // For local dev purposes
           trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
         },
         googleAnalytics: {
-          trackingID: "x", // For local dev purposes
+          // trackingID: "x", // For local dev purposes
           trackingID: process.env.GOOGLE_ANALYTICS_ID,
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
