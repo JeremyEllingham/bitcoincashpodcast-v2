@@ -1,0 +1,49 @@
+---
+id: what-is-musd
+sidebar_position: 0
+title: What is MUSD?
+---
+
+import CustomReactPlayer from "../../src/components/CustomReactPlayer";
+import RoundingError from "@site/static/img/faqs/roundingerror.png";
+
+MUSD is a stablecoin that allows users to borrow from the Moria Treasury, a contract on the Bitcoin Cash network. Users must provide, at a minimum 150%, collateral in BCH. MUSD is built on the Moria Protocol.
+
+The Moria Protocol is a decentralized stablecoin protocol built on top of the [CashTokens](what-is-cashtokens) system on Bitcoin Cash. The developers of the Moria Protocol are [Riften Labs](https://www.riftenlabs.com/about), the same team behind the [Cauldron DEX](https://www.cauldron.quest/). It's currently being used to allow users to borrow the MUSD stablecoin. It's similar to Liquity on the Ethereum network. You can check out the [Moria Protocol White Paper here.](/Moria-Whitepaper.pdf)
+
+## What is a stablecoin?
+All stablecoins are not equal. A stablecoin is a token that is tied to any kind of asset. Because the overall cryptocurrency market is [extremely volatile](/faqs/Commerce/pricing-in-bch), stablecoins were made to to add some stability in this market. That could be the USD; a stock; gold, really, just about anything. How that token is tied to said asset can vary from a centralized solution by means through a company with reserves, algorithmically, or decentrally with market forces. MUSD is a decentralized, floating peg stablecoin. That floating peg aims towards parity via market forces. Because the contract during loan creation is a fixed 1:1 (USD to MUSD) ratio, market forces will try to keep that peg very close to that ratio.
+
+A stablecoin on the Bitcoin Cash network is just a token, it's a currency running atop of the network. Bitcoin Cash on the otherhand is a [currency and a network](/faqs/Cryptocurrency/what-is-the-difference-between-utxo-and-account-model-chains#networks-vs-currencies).
+
+## Methods of redemption
+There are several methods of redemption of a stablecoin.
+- One method of stablecoin redemption is trading it on the open market for that actual asset that that stablecoin represents or another stablecoin that represents that same asset.
+- You may also be able to redeem said stablecoin with the company that oversees it, if they use the reserves model.
+
+Company backed stablecoins include, but are not limited to Tether (USDT - Tether Limited) and USD Coin (USDC - Coinbase). These are the most centralized solution and requires trusting a third party, but generally, they have the most stable pegs. An algorithmically backed stablecoin would be the DAI on the Ethereum network. An algorithmically backed stablecoin can be less centralized but also runs the risks of bugs that can cause complete collapse of the peg, like what we saw with [TerraUSD - UST](https://www.chainalysis.com/blog/how-terrausd-collapsed/). And finally, a collateralized backed stablecoin would be the MUSD. An overcollateralized stablecoin can be more decentralized but may have a slightly more unstable peg.
+
+Since there are no reserves with a floating peg stablecoin (algorithmically and market forces), redemption is done through the open market.
+
+## What's the difference between Tether and MUSD?
+[Tether, also known by its ticker USDT](/faqs/Scams/tether), is a type of stablecoin. It's the most popular stablecoin and is ran by Tether Limited. Their peg is supposed to be backed by USD reserves, but there haven't been any full audits of Tether's reserves to verify that there are enough Dollars to match Tether's supply. MUSD is, on the other hand, completely transparent and is heavily overcollateralized. [Check out the stats](https://app.moria.money/stats).
+
+## Potential issues
+MUSD is in alpha mode, you should expect bugs and potential loss of funds. It is very important to read the 'experimental nature and risks section' on the [Moria website](https://docs.riftenlabs.com/moria/testrun/#experimental-nature-and-risks), it reads:
+
+>- Experimental Protocol: Moria is a test deployment and may have undetected bugs or vulnerabilities in the smart contracts, deployment process, or system design. These could result in partial or complete loss of funds.
+>- Uncertain Longevity: The test run's duration depends on performance and stability. The protocol may be terminated early if severe issues are identified.
+>- [Oracle](https://oracles.cash/faq) outside of protocols control: For this test run, the Moria protocol uses oracles.cash. These oracles provide no guarantee of longevity.
+>- No Guarantees: Participation is entirely at the user’s own risk, and there are no guarantees of system performance, reliability, or security.
+
+There is a UI rounding error when setting collateral at 150%. This could prevent you from borrowing MUSD. You can resolve this issue by either increasing your collateral above 150% or you can wait for market conditions to change.
+<img src={RoundingError} alt="Rounding error" />
+
+## Loan defaulting
+You must keep, at a minimum, 110% collateralization or you will risk defaulting on your MUSD loan. You can add collateral or pay off your loan at any time you please. If you are in default territory, other people will be able to liquidate your loan, giving that collateral to that liquidator.
+
+## How do I borrow MUSD?
+<CustomReactPlayer
+  url={"https://www.youtube.com/watch?v=gZd6uRz1IU8"} />
+
+_David Hudman shows how to borrow MUSD using Wallet Connect with the Cashonize web wallet._
